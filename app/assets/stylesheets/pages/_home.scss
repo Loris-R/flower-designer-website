@@ -1,1 +1,170 @@
-// Specific CSS for your home-page
+#scale-logo {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4B515D;
+  transition: all 5ms linear;
+}
+
+.play {
+  display: none;
+}
+
+.scale-it {
+  width: 30px;
+  height: 30px;
+  animation: scale 2000ms ease-in forwards;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(6.0);
+  }
+}
+
+.home-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("background-home.jpg");
+  background-size: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+}
+
+.visuallyhidden {
+  animation: fadeout ease-out 850ms forwards;
+  -webkit-animation: fadeout ease-out 850ms forwards;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout ease-out 850ms forwards;
+  /* Firefox < 16 */
+  -ms-animation: fadeout ease-out 850ms forwards;
+  /* Internet Explorer */
+  -o-animation: fadeout ease-out 850ms forwards;
+  /* Opera < 12.1 */
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.visuallyshow {
+  display: block;
+  animation: fadein ease-in 850ms forwards;
+  -webkit-animation: fadein ease-in 850ms forwards;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein ease-in 850ms forwards;
+  /* Firefox < 16 */
+  -ms-animation: fadein ease-in 850ms forwards;
+  /* Internet Explorer */
+  -o-animation: fadein ease-in 850ms forwards;
+  /* Opera < 12.1 */
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
