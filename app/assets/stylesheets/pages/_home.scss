@@ -13,10 +13,15 @@
   display: none;
 }
 
-.scale-it {
+.scaled-logo {
   width: 30px;
   height: 30px;
   animation: scale 2000ms ease-in forwards;
+}
+
+.fixed-logo {
+  width: 180px;
+  height: 180px;
 }
 
 @keyframes scale {
@@ -30,7 +35,6 @@
   height: 100vh;
   background-image: url("background-home.jpg");
   background-size: 100vw;
-  background-position: center;
   background-repeat: no-repeat;
   position: fixed;
   top: 0;
@@ -103,7 +107,9 @@
 }
 
 .visuallyshow {
-  display: block;
+  display: inline-block;
+  text-align: center;
+  line-height: 100vh;
   animation: fadein ease-in 850ms forwards;
   -webkit-animation: fadein ease-in 850ms forwards;
   /* Safari, Chrome and Opera > 12.1 */
