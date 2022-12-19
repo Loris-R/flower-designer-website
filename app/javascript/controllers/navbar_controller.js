@@ -1,11 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["tophome", "bottomhome"];
+  static targets = ["icon", "optionshome", "tophome", "bottomhome"]
 
   connect() {
     const tophome = this.tophomeTarget;
     const bottomhome = this.bottomhomeTarget;
+    const icon = this.iconTarget;
 
     function fadeOutDelay() {
       function fadeOut() {
@@ -16,8 +17,9 @@ export default class extends Controller {
 
     function showUpDelay() {
       function showUp() {
-          bottomhome.classList.add('visuallyshow');
-        }
+        bottomhome.classList.add('visuallyshow');
+        icon.classList.add('visuallyshow');
+      }
       setTimeout(showUp, 1000);
     };
 
@@ -29,4 +31,13 @@ export default class extends Controller {
     window.addEventListener("load", ready)
   }
 
+  translate() {
+    console.log("lolo")
+    const icon = this.iconTarget;
+    const optionshome = this.optionshomeTarget;
+
+    icon.classList.toggle("move");
+    optionshome.classList.toggle("open");
+
+  }
 }

@@ -1,0 +1,13 @@
+<div data-controller="navbar">
+  <div class="menu">
+    <div></div>
+    <div class="icon" data-navbar-target="icon" data-action="click->navbar#translate">
+      <i class="light_icon icons"> </i>
+      <i class="light_icon icons"> </i>
+      <i class="light_icon icons"> </i>
+    </div>
+  </div>
+  <div class="optionshome" data-navbar-target="optionshome">
+    <%= link_to "Votre évènement", evenement_path, class: "language_link" %>
+    <%= link_to "Contact", contact_path, class: "language_link" %>
+  </div>

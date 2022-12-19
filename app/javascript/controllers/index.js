@@ -4,6 +4,5 @@
 
 import { application } from "./application"
 
-
-import HomeController from "./home_controller"
-application.register("home", HomeController)
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)
