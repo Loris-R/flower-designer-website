@@ -1,12 +1,91 @@
-.navbar-lewagon {
+.menu {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  background: white;
+  height: 0;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.light_icon {
+  background-color: white;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.icons {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 2.5px;
+  border-radius: 3px;
+  margin: 7px 0;
+  left: 0;
+  transition: all 1s;
+}
+
+.icon i:nth-child(1) {
+  top: 16px;
+}
+
+.icon i:nth-child(2) {
+  top: 26px;
+}
+
+.icon i:nth-child(3) {
+  top: 36px;
+}
+
+.icon.move i:nth-child(1) {
+  top: 25px;
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
+
+.icon.move i:nth-child(2) {
+  background: transparent;
+}
+
+.icon.move i:nth-child(3) {
+  top: 25px;
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
+.icon {
+  display: none;
+  position: relative;
+  top: 69px;
+  height: 59px;
+  width: 31px;
+  z-index: 1000;
+  right: 89px;
+}
+
+.language_link {
+  color: white;
+  padding: 5px;
+  z-index: 40;
+  font-size: smaller;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.optionshome {
+  width: 91vw;
+  background: #4b515deb;
+  height: 30px;
+  position: fixed;
+  right: -96em;
+  top: 87px;
+  transition: right linear .60s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 2px;
+  z-index: 100;
+}
+
+.open {
+  position: fixed;
+  transition: right linear .60s;
+  right: 73px;
+  z-index: 100;
 }

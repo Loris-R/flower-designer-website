@@ -1,9 +1,17 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@font-face {
+  font-family: 'marigold';
+  src: url("MarigoldSans.otf") format('truetype');
+}
 
+@font-face {
+  font-family: 'marigold_two';
+  letter-spacing: 2px;
+  src: url("MARIGOLD.otf") format('truetype');
+}
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: 'marigold_two';
+$headers-font: 'marigold_two';
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
