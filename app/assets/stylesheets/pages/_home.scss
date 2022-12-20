@@ -19,6 +19,11 @@
   animation: scale 2000ms ease-in forwards;
 }
 
+#scale-logo {
+  position: fixed;
+  top: 0;
+}
+
 .fixed-logo {
   width: 180px;
   height: 180px;
@@ -32,11 +37,9 @@
 
 .home-page {
   width: 100vw;
-  height: 100vh;
   background-image: url("background-home.jpg");
-  background-size: 100vw;
   background-repeat: no-repeat;
-  position: fixed;
+  position: relative;
   top: 0;
 }
 
@@ -173,4 +176,48 @@
   100% {
     opacity: 1;
   }
+}
+
+.concept-photo {
+  height: auto;
+  width: 400px;
+}
+
+.parcours-photo {
+  background-image: url("coiffe-ukrainienne.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 918px;
+  width: 400px;
+  height: 600px;
+}
+
+.concept-part, .parcours-part, .photo-parcours {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-parcours {
+  align-items: center;
+}
+
+.concept-title, .parcours-title {
+  text-align: center;
+  padding: 6rem;
+  margin: 0;
+}
+
+.p-concept, .p-parcours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+.p-concept {
+  margin-left: 71px;
+}
+
+.p-parcours {
+  margin-right: 71px;
 }
