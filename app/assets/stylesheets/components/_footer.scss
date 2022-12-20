@@ -1,0 +1,28 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  background-color: #4B515D;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.p-footer {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
+}
