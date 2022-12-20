@@ -31,13 +31,23 @@ export default class extends Controller {
     window.addEventListener("load", ready)
   }
 
-  translate() {
-    console.log("lolo")
+  translate(event) {
+    event.preventDefault();
     const icon = this.iconTarget;
     const optionshome = this.optionshomeTarget;
 
     icon.classList.toggle("move");
     optionshome.classList.toggle("open");
 
+    if(optionshome.classList.contains("open")){
+      optionshome.ontransitionend = () => {
+        optionshome.style.position = "absolute";
+      }
+    } else {
+      optionshome.style.position = "fixed";
+      optionshome.ontransitionend = () => {
+        optionshome.style.position = "fixed";
+      }
+    };
   }
 }
