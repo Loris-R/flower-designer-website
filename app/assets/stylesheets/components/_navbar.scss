@@ -56,7 +56,11 @@
   height: 59px;
   width: 31px;
   z-index: 1000;
-  right: 89px;
+  right: 76px;
+}
+
+.center_menu {
+  margin-right: 23px;
 }
 
 .language_link {
@@ -78,7 +82,7 @@
   transition: right linear .60s;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-radius: 2px;
   z-index: 100;
 }
