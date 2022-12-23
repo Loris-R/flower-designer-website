@@ -1,5 +1,5 @@
-<div data-controller="navbar" class="home-page">
-  <div class="menu">
+<div data-controller="navbar" class="<%= "home-page" if current_page?(root_path) %>">
+  <div class="menu <%= "menu-on-pages" unless current_page?(root_path)%>">
     <div></div>
     <div class="icon" data-navbar-target="icon" data-action="click->navbar#translate">
       <i class="light_icon icons"> </i>

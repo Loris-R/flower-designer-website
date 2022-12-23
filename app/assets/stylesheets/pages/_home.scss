@@ -38,6 +38,10 @@ p {
 .fixed-logo {
   width: 180px;
   height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes scale {
@@ -48,6 +52,7 @@ p {
 
 .home-page {
   width: 98.8vw;
+  height: 100vh;
   background-image: url("background-home.jpg");
   background-repeat: no-repeat;
   position: relative;
@@ -124,7 +129,6 @@ p {
   display: inline-block;
   text-align: center;
   line-height: 100vh;
-  width: 98.8vw;
   animation: fadein ease-in 850ms forwards;
   -webkit-animation: fadein ease-in 850ms forwards;
   /* Safari, Chrome and Opera > 12.1 */

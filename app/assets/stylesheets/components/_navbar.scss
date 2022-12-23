@@ -12,11 +12,11 @@
 .icons {
   position: absolute;
   display: block;
-  width: 32px;
   height: 2.5px;
   border-radius: 3px;
   margin: 7px 0;
   right: 0;
+  width: 31px;
   transition: all 1s;
 }
 
@@ -54,9 +54,9 @@
   position: relative;
   top: 69px;
   height: 59px;
-  width: 31px;
-  z-index: 1000;
+  z-index: 1001;
   right: 76px;
+  width:31px;
 }
 
 .center_menu {
@@ -91,5 +91,12 @@
   position: fixed;
   transition: right linear .60s;
   right: 66px;
-  z-index: 100;
+  z-index: 1000;
+}
+
+.menu-on-pages {
+  width: 100%;
+  height: 100px;
+  background-color: #4B515D;
+
 }
