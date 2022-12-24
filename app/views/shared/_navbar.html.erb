@@ -8,6 +8,9 @@
     </div>
   </div>
   <div class="optionshome" data-navbar-target="optionshome">
+    <% unless current_page?(root_path) %>
+      <%= link_to "Acceuil", root_path, class: "language_link" %>
+    <% end %>
     <%= link_to "Votre évènement", evenement_path, class: "language_link" %>
     <%= link_to "Performances artistiques", performances_path, class: "language_link" %>
     <%= link_to "Murs et devantures végétalisées", murs_path, class: "language_link" %>
