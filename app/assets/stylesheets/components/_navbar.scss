@@ -87,6 +87,10 @@
   z-index: 100;
 }
 
+.hidemenu {
+  right: -96em;
+}
+
 .open {
   position: fixed;
   transition: right linear .60s;
@@ -94,12 +98,14 @@
   z-index: 1000;
 }
 
-.menu-on-pages {
-  height: 123px;
-  background-color: #4B515D;
+.dark_icon {
+ background-color: #4B515D;
 }
 
 .icon-on-pages {
   display: block;
-  top: 28px;
+}
+
+.open-menu-on-pages {
+  right: 66px;
 }

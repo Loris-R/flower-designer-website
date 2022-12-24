@@ -1,13 +1,13 @@
 <div data-controller="navbar" class="<%= "home-page" if current_page?(root_path) %>">
-  <div class="menu <%= "menu-on-pages" unless current_page?(root_path)%>">
+  <div class="menu">
     <div></div>
-    <div class="icon <%= "icon-on-pages" unless current_page?(root_path)%>" data-navbar-target="icon" data-action="click->navbar#translate">
-      <i class="light_icon icons"> </i>
-      <i class="light_icon icons"> </i>
-      <i class="light_icon icons"> </i>
+    <div class="icon <%= "icon-on-pages move" unless current_page?(root_path)%>" data-navbar-target="icon" data-action="click->navbar#translate">
+      <i class="light_icon icons <%= "dark_icon" unless current_page?(root_path)%>"> </i>
+      <i class="light_icon icons <%= "dark_icon" unless current_page?(root_path)%>"> </i>
+      <i class="light_icon icons <%= "dark_icon" unless current_page?(root_path)%>"> </i>
     </div>
   </div>
-  <div class="optionshome" data-navbar-target="optionshome">
+  <div class="optionshome <%= "hidemenu" if current_page?(root_path) %> <%= "open-menu-on-pages" unless current_page?(root_path)%>" data-navbar-target="optionshome">
     <% unless current_page?(root_path) %>
       <%= link_to "Acceuil", root_path, class: "language_link" %>
     <% end %>

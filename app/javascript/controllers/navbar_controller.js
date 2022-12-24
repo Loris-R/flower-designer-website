@@ -39,10 +39,19 @@ export default class extends Controller {
     const icon = this.iconTarget;
     const optionshome = this.optionshomeTarget;
 
-    icon.classList.toggle("move");
-    optionshome.classList.toggle("open");
+    const path = window.location.pathname;
 
-    if(optionshome.classList.contains("open")){
+    if(path != "/"){
+      console.log("om");
+      optionshome.classList.toggle("open-menu-on-pages");
+      optionshome.classList.toggle("hidemenu");
+      icon.classList.toggle("move");
+    } else {
+      icon.classList.toggle("move");
+      optionshome.classList.toggle("open");
+    }
+
+    if (optionshome.classList.contains("open")){
       optionshome.ontransitionend = () => {
         optionshome.style.position = "absolute";
       }
