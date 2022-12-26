@@ -1,17 +1,34 @@
-<div data-controller="navbar" class="home-page">
-  <div class="menu">
-    <div></div>
-    <div class="icon" data-navbar-target="icon" data-action="click->navbar#translate">
-      <i class="light_icon icons"> </i>
-      <i class="light_icon icons"> </i>
-      <i class="light_icon icons"> </i>
+<div data-controller="navbar" class="<%= "home-page" if current_page?(root_path) %>">
+  <div class="<%= "background" unless current_page?(root_path)%>">
+    <div class="menu">
+      <div></div>
+      <div class="icon <%= "icon-on-pages move" unless current_page?(root_path)%>" data-navbar-target="icon" data-action="click->navbar#translate">
+        <i class="light_icon icons <%= "dark_icon" unless current_page?(root_path)%>"> </i>
+        <i class="light_icon icons <%= "dark_icon" unless current_page?(root_path)%>"> </i>
+        <i class="light_icon icons <%= "dark_icon" unless current_page?(root_path)%>"> </i>
+      </div>
     </div>
+    <div class="optionshome <%= "hidemenu" if current_page?(root_path) %> <%= "open-menu-on-pages" unless current_page?(root_path)%>" data-navbar-target="optionshome">
+      <% unless current_page?(root_path) %>
+        <%= link_to "Acceuil", root_path, class: "language_link" %>
+      <% end %>
+      <%= link_to "Votre évènement", evenement_path, class: "language_link" %>
+      <%= link_to "Performances artistiques", performances_path, class: "language_link" %>
+      <%= link_to "Murs et devantures végétalisées", murs_path, class: "language_link" %>
+      <%= link_to "Cours d'art floral", cours_path, class: "language_link" %>
+      <%= link_to "L'atelier", atelier_path, class: "language_link" %>
+      <%= link_to "Contact", contact_path, class: "language_link center_menu" %>
+    </div>
+    <% unless current_page?(root_path) %>
+      <div class="line"></div>
+    <% end %>
   </div>
-  <div class="optionshome" data-navbar-target="optionshome">
-    <%= link_to "Votre évènement", evenement_path, class: "language_link" %>
-    <%= link_to "Performances artistiques", performances_path, class: "language_link" %>
-    <%= link_to "Murs et devantures végétalisées", murs_path, class: "language_link" %>
-    <%= link_to "Cours d'art floral", cours_path, class: "language_link" %>
-    <%= link_to "L'atelier", atelier_path, class: "language_link" %>
-    <%= link_to "Contact", contact_path, class: "language_link center_menu" %>
-  </div>
+  <% if current_page?(root_path) %>
+    <div id="scale-logo" data-navbar-target="tophome">
+      <%= image_tag "logo-blanc.png", class: "scaled-logo" %>
+    </div>
+    <div class="play" data-navbar-target="bottomhome">
+      <%= image_tag "logo-blanc.png", class: "fixed-logo" %>
+    </div>
+  <% end %>
+</div>

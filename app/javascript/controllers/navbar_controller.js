@@ -1,21 +1,20 @@
 import { Controller } from "@hotwired/stimulus"
+import { bottom } from "@popperjs/core";
 
 export default class extends Controller {
   static targets = ["icon", "optionshome", "tophome", "bottomhome"]
 
   connect() {
-    const tophome = this.tophomeTarget;
-    const bottomhome = this.bottomhomeTarget;
     const icon = this.iconTarget;
 
-    function fadeOutDelay() {
+    function fadeOutDelay(tophome) {
       function fadeOut() {
         tophome.classList.add('visuallyhidden');
       };
       setTimeout(fadeOut, 1200);
     };
 
-    function showUpDelay() {
+    function showUpDelay(bottomhome) {
       function showUp() {
         bottomhome.classList.add('visuallyshow');
         icon.classList.add('visuallyshow');
@@ -23,12 +22,16 @@ export default class extends Controller {
       setTimeout(showUp, 1000);
     };
 
-    const ready = function makeAction() {
-      fadeOutDelay();
-      showUpDelay();
+    function makeAction(tophome, bottomhome) {
+      fadeOutDelay(tophome);
+      showUpDelay(bottomhome);
     }
 
-    window.addEventListener("load", ready)
+    if (this.hasTophomeTarget && this.hasBottomhomeTarget) {
+      const tophome = this.tophomeTarget;
+      const bottomhome = this.bottomhomeTarget;
+      window.addEventListener("load", makeAction(tophome, bottomhome));
+    }
   }
 
   translate(event) {
@@ -36,10 +39,19 @@ export default class extends Controller {
     const icon = this.iconTarget;
     const optionshome = this.optionshomeTarget;
 
-    icon.classList.toggle("move");
-    optionshome.classList.toggle("open");
+    const path = window.location.pathname;
 
-    if(optionshome.classList.contains("open")){
+    if(path != "/"){
+      console.log("om");
+      optionshome.classList.toggle("open-menu-on-pages");
+      optionshome.classList.toggle("hidemenu");
+      icon.classList.toggle("move");
+    } else {
+      icon.classList.toggle("move");
+      optionshome.classList.toggle("open");
+    }
+
+    if (optionshome.classList.contains("open")){
       optionshome.ontransitionend = () => {
         optionshome.style.position = "absolute";
       }

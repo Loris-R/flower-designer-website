@@ -12,11 +12,11 @@
 .icons {
   position: absolute;
   display: block;
-  width: 32px;
   height: 2.5px;
   border-radius: 3px;
   margin: 7px 0;
   right: 0;
+  width: 31px;
   transition: all 1s;
 }
 
@@ -54,9 +54,9 @@
   position: relative;
   top: 69px;
   height: 59px;
-  width: 31px;
-  z-index: 1000;
+  z-index: 1001;
   right: 76px;
+  width:31px;
 }
 
 .center_menu {
@@ -87,9 +87,44 @@
   z-index: 100;
 }
 
+.hidemenu {
+  right: -96em;
+}
+
 .open {
   position: fixed;
   transition: right linear .60s;
   right: 66px;
+  z-index: 1000;
+}
+
+.dark_icon {
+ background-color: #4B515D;
+}
+
+.icon-on-pages {
+  display: block;
+  position: fixed;
+}
+
+.open-menu-on-pages {
+  right: 66px;
+}
+
+.line {
+  background: #4B515D;
+  height: 1.1px;
+  position: fixed;
+  top: 140px;
+  width: 100%;
   z-index: 100;
+}
+
+.background {
+  background-color: #ce4257;
+  height: 141px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
 }

@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'marigold_two';
   letter-spacing: 2px;
-  src: url("MARIGOLD.otf") format('truetype');
+  src: font-url("MARIGOLD.otf") format('truetype');
 }
 // Define fonts for body and headers
 $body-font: 'marigold_two';
