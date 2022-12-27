@@ -1,18 +1,37 @@
 <h1 class="title-performance"> Performances </h1>
 <p class="text-performance"> C'est sur l'île de la Réunion, en avril 2019 que je réalise mon premier shooting d'art floral. Poussée par mon ami Ghjuliu Mattei, photographe, nous réalisons ensemble, notre première collaboration. Je voulais mettre en scène une femme plongée dans cette faune incroyable pour mettre mes créations en avant. Ma satisfaction fut tellement forte que je décide alors de réitérer l'expérience sur des thèmes tous aussi différents les uns que les autres. Pour moi, c'est le moyen le plus fort d'expression en art floral. J'aime créer ces ambiances, réfléchir au moindre détail, mélanger les textures et les couleurs de façon à obtenir un tableau parfait </p>
-<div class="frame-shooting-one" data-controller="performances" data-performances-target="frame">
-  <div class="card-container">
-    <div class="card">
-      <div class="front">
-        <h6 class="white"> 1er shooting </h6>
-        <h6 class="white shooting-name"> "Sauvage" </h6>
-        <p class="white"> Avril 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
+<div class="allframe" data-controller="performances">
+  <div class="frame-shooting-one" data-performances-target="frame-one">
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <h6 class="white"> 1er shooting </h6>
+          <h6 class="white shooting-name"> "Sauvage" </h6>
+          <p class="white"> Avril 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
+        </div>
+        <div class="back" data-performances-target="flipedcard">
+          <div class="pic-cont">
+            <%= image_tag "Sauvage-1.jpg", class: "sauvage-pic sauvage-one" %>
+            <%= image_tag "Sauvage-3.jpg", class: "sauvage-pic visibility", data: { performances_target: "sauvagethree" } %>
+            <%= image_tag "Sauvage-4.jpg", class: "sauvage-pic visibility", data: { performances_target: "sauvagefour" } %>
+          </div>
+        </div>
       </div>
-      <div class="back" data-performances-target="flipedcard">
-        <div class="pic-cont">
-          <%= image_tag "Sauvage-1.jpg", class: "sauvage-pic sauvage-one" %>
-          <%= image_tag "Sauvage-3.jpg", class: "sauvage-pic visibility", data: { performances_target: "sauvagethree" } %>
-          <%= image_tag "Sauvage-4.jpg", class: "sauvage-pic visibility", data: { performances_target: "sauvagefour" } %>
+    </div>
+  </div>
+  <div class="frame-shooting-one">
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <h6 class="white"> 2ème shooting </h6>
+          <h6 class="white shooting-name"> "Dia de los muertos" </h6>
+          <p class="white"> Octobre 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
+        </div>
+        <div class="back">
+          <div class="pic-cont">
+            <%= image_tag "Dia-de-los-muertos-1.jpg", class: "sauvage-pic sauvage-one" %>
+            <%= image_tag "Dia-de-los-muertos-2.jpg", class: "sauvage-pic visibility" %>
+          </div>
         </div>
       </div>
     </div>
