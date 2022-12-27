@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import { bottom } from "@popperjs/core";
 
 export default class extends Controller {
   static targets = ["icon", "optionshome", "tophome", "bottomhome"]
