@@ -1,0 +1,88 @@
+.card {
+  height: 562px;
+  width: 372.4px;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  background-color: transparent;
+  border: none;
+}
+
+.card-container {
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  position: relative;
+  height: 562px;
+  width: 372.4px;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 300ms;
+  transition-timing-function: linear;
+  transform-origin: center center;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: transform 300ms;
+  -webkit-transition-timing-function: linear;
+  -webkit-transform-origin: center center;
+}
+
+.card .front {
+  background: #4B515D;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.white {
+  color: white;
+}
+
+.shooting-name {
+  padding: 6rem;
+  font-size: xx-large;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
+.pic-cont {
+  height: 562px;
+  width: 372.4px;
+}
+
+.sauvage-one {
+  object-fit: contain;
+  height: 562px;
+}
+
+.title-performance {
+  margin: 182px 0 0 0;
+  text-align: center;
+  line-height: 0;
+}
+
+.text-performance {
+  padding: 5em;
+  text-align: center;
+}
