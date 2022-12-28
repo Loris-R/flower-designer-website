@@ -10,8 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_28_141653) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_names"
+    t.string "last_names"
+    t.string "phone_number"
+    t.string "email"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.bigint "contact_id", null: false
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_messages_on_contact_id"
+  end
+
+  create_table "quotings", force: :cascade do |t|
+    t.bigint "contact_id", null: false
+    t.string "address"
+    t.string "zipcode"
+    t.string "city"
+    t.date "event_date"
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_quotings_on_contact_id"
+  end
+
+  add_foreign_key "messages", "contacts"
+  add_foreign_key "quotings", "contacts"
 end
