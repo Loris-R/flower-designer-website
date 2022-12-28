@@ -2,8 +2,6 @@
   height: 562px;
   width: 372.4px;
   position: relative;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
   background-color: transparent;
   border: none;
 }
@@ -40,8 +38,6 @@
 
 .card .front {
   background: #4B515D;
-  transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,20 +61,15 @@
   text-align: center;
 }
 
-.card .back {
+
+.flip {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  visibility: unset;
 }
 
-.card:hover .front {
-  transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
-}
-
-.card:hover .back {
-  transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-}
 
 .scaled-button {
   width: 15px;

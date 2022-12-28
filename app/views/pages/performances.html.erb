@@ -4,14 +4,14 @@
   <div class="frame-shooting">
     <div class="card-container">
       <div class="card">
-        <div class="front">
+        <div class="front" data-performances-target="frontcardone">
           <h6 class="white shooting"> 1er shooting </h6>
           <h6 class="white shooting-name"> "Sauvage" </h6>
           <p class="white shooting-text"> Avril 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
           <%= image_tag "logo-blanc.png", class: "scaled-button", data: {
             action: "click->performances#translate" } %>
         </div>
-        <div class="back" data-performances-target="flipedcardone">
+        <div class="back visibility" data-performances-target="flipedcardone">
           <div class="pic-cont">
             <%= image_tag "Sauvage-1.jpg", class: "performance-pic seen-one" %>
             <%= image_tag "Sauvage-3.jpg", class: "performance-pic visibility", data: { performances_target: "sauvagethree" } %>
