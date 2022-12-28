@@ -1,20 +1,25 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipedcard", "sauvagethree", "sauvagefour", "frame-one"]
+  static targets = ["flipedcardone", "sauvagethree", "sauvagefour", "flipedcardtwo", "losmuertosone", "losmuertostwo"]
 
-  connect() {
-    const flipedcard = this.flipedcardTarget;
+  translate() {
+    const flipedcardone = this.flipedcardoneTarget;
     const sauvagethree = this.sauvagethreeTarget;
     const sauvagefour = this.sauvagefourTarget;
 
-   // if flipedcard transition finished
-      flipedcard.addEventListener('transitionend', () => {
-        sauvagethree.classList.toggle("sauvage-three");
-        sauvagefour.classList.toggle("sauvage-four");
-      })
-   // sauvagethree slide left
-   // sauvagefour slide right
-   // frame-one property class changed from justify content center to space around
+    flipedcardone.addEventListener('transitionend', () => {
+      sauvagethree.classList.toggle("sauvage-three");
+      sauvagefour.classList.toggle("sauvage-four");
+    });
+
+    const flipedcardtwo = this.flipedcardtwoTarget;
+    const losmuertosone = this.losmuertosoneTarget;
+    const losmuertostwo = this.losmuertostwoTarget;
+
+    flipedcardtwo.addEventListener('transitionend', () => {
+      losmuertosone.classList.toggle("losmuertos-one");
+      losmuertostwo.classList.toggle("losmuertos-two");
+    });
   }
 }

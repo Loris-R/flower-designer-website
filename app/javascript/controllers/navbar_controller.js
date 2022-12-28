@@ -41,7 +41,6 @@ export default class extends Controller {
     const path = window.location.pathname;
 
     if(path != "/"){
-      console.log("om");
       optionshome.classList.toggle("open-menu-on-pages");
       optionshome.classList.toggle("hidemenu");
       icon.classList.toggle("move");

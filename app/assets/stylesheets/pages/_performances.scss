@@ -18,7 +18,7 @@
   width: 372.4px;
 }
 
-.frame-shooting-one {
+.frame-shooting {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
@@ -42,7 +42,6 @@
   background: #4B515D;
   transform: rotateY(0deg);
   -webkit-transform: rotateY(0deg);
-  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,8 +52,17 @@
 }
 
 .shooting-name {
-  padding: 6rem;
+  padding: 3rem;
   font-size: xx-large;
+}
+
+.shooting {
+  padding: 68px;
+}
+
+.shooting-text {
+  padding: 47px;
+  text-align: center;
 }
 
 .card .back {
@@ -72,19 +80,27 @@
   -webkit-transform: rotateY(0deg);
 }
 
+.scaled-button {
+  width: 15px;
+  height: 15px;
+  -webkit-animation: scale 1750ms ease-in-out forwards;
+  animation: scale 1750ms ease-in-out forwards;
+  position: absolute;
+  bottom: 4rem;
+}
+
 .pic-cont {
   height: 562px;
   width: 372.4px;
 }
 
-.sauvage-pic {
+.performance-pic {
   object-fit: contain;
   height: 562px;
-  width: 372.4px;
   position: absolute;
 }
 
-.sauvage-one {
+.seen-one {
   z-index: 100;
 }
 
@@ -106,6 +122,24 @@
 }
 
 .sauvage-four {
+  visibility: unset;
+  transform: translate(-30em, 0);
+  -webkit-transform: translate(-30em, 0);
+  -moz-transform: translate(-30em, 0);
+  -o-transform: translate(-30em, 0);
+  -ms-transform: translate(-30em, 0);
+}
+
+.losmuertos-one {
+  visibility: unset;
+  transform: translate(30em, 0);
+  -webkit-transform: translate(30em, 0);
+  -moz-transform: translate(30em, 0);
+  -o-transform: translate(30em, 0);
+  -ms-transform: translate(30em, 0);
+}
+
+.losmuertos-two {
   visibility: unset;
   transform: translate(-30em, 0);
   -webkit-transform: translate(-30em, 0);
