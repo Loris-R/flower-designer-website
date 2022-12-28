@@ -90,6 +90,28 @@
 
 .visibility {
  visibility: hidden;
+ transition: 1s ease-in-out;
+ -webkit-transition: 1s ease-in-out;
+ -moz-transition: 1s ease-in-out;
+ -o-transition: 1s ease-in-out;
+}
+
+.sauvage-three {
+  visibility: unset;
+  transform: translate(30em, 0);
+  -webkit-transform: translate(30em, 0);
+  -moz-transform: translate(30em, 0);
+  -o-transform: translate(30em, 0);
+  -ms-transform: translate(30em, 0);
+}
+
+.sauvage-four {
+  visibility: unset;
+  transform: translate(-30em, 0);
+  -webkit-transform: translate(-30em, 0);
+  -moz-transform: translate(-30em, 0);
+  -o-transform: translate(-30em, 0);
+  -ms-transform: translate(-30em, 0);
 }
 
 .title-performance {

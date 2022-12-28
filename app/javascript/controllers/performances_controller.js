@@ -9,6 +9,10 @@ export default class extends Controller {
     const sauvagefour = this.sauvagefourTarget;
 
    // if flipedcard transition finished
+      flipedcard.addEventListener('transitionend', () => {
+        sauvagethree.classList.toggle("sauvage-three");
+        sauvagefour.classList.toggle("sauvage-four");
+      })
    // sauvagethree slide left
    // sauvagefour slide right
    // frame-one property class changed from justify content center to space around
