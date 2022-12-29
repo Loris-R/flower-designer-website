@@ -1,17 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipedcardone", "sauvagethree", "sauvagefour", "frontcardone", "flipedcardtwo", "losmuertosone", "losmuertostwo"]
+  static targets = ["flipcardone", "sauvagethree", "sauvagefour", "flipedcardtwo", "losmuertosone", "losmuertostwo"]
 
   translate() {
-    const flipedcardone = this.flipedcardoneTarget;
-    const frontcardone = this.frontcardoneTarget;
     const sauvagethree = this.sauvagethreeTarget;
     const sauvagefour = this.sauvagefourTarget;
+    const flipcardone = this.flipcardoneTarget;
 
-    frontcardone.classList.toggle("flip");
-    flipedcardone.classList.toggle("visibility");
-    flipedcardone.addEventListener('transitionend', () => {
+    flipcardone.classList.toggle("flip");
+
+    flipcardone.addEventListener('transitionend', () => {
       sauvagethree.classList.toggle("sauvage-three");
       sauvagefour.classList.toggle("sauvage-four");
     });

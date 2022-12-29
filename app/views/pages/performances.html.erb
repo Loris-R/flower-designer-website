@@ -1,17 +1,16 @@
-<h1 class="title-performance"> Performances </h1>
-<p class="text-performance"> C'est sur l'île de la Réunion, en avril 2019 que je réalise mon premier shooting d'art floral. Poussée par mon ami Ghjuliu Mattei, photographe, nous réalisons ensemble, notre première collaboration. Je voulais mettre en scène une femme plongée dans cette faune incroyable pour mettre mes créations en avant. Ma satisfaction fut tellement forte que je décide alors de réitérer l'expérience sur des thèmes tous aussi différents les uns que les autres. Pour moi, c'est le moyen le plus fort d'expression en art floral. J'aime créer ces ambiances, réfléchir au moindre détail, mélanger les textures et les couleurs de façon à obtenir un tableau parfait </p>
+<h1 class="title-performance white"> Performances </h1>
+<p class="text-performance white"> C'est sur l'île de la Réunion, en avril 2019 que je réalise mon premier shooting d'art floral. Poussée par mon ami Ghjuliu Mattei, photographe, nous réalisons ensemble, notre première collaboration. Je voulais mettre en scène une femme plongée dans cette faune incroyable pour mettre mes créations en avant. Ma satisfaction fut tellement forte que je décide alors de réitérer l'expérience sur des thèmes tous aussi différents les uns que les autres. Pour moi, c'est le moyen le plus fort d'expression en art floral. J'aime créer ces ambiances, réfléchir au moindre détail, mélanger les textures et les couleurs de façon à obtenir un tableau parfait </p>
 <div class="allframe" data-controller="performances">
   <div class="frame-shooting">
     <div class="card-container">
-      <div class="card">
-        <div class="front" data-performances-target="frontcardone">
-          <h6 class="white shooting"> 1er shooting </h6>
-          <h6 class="white shooting-name"> "Sauvage" </h6>
-          <p class="white shooting-text"> Avril 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
-          <%= image_tag "logo-blanc.png", class: "scaled-button", data: {
-            action: "click->performances#translate" } %>
+      <div class="card" data-performances-target="flipcardone">
+        <div class="front">
+          <h6 class="grey shooting"> 1er shooting </h6>
+          <h6 class="grey shooting-name"> "Sauvage" </h6>
+          <p class="grey shooting-text"> Avril 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
+            <button class= "scaled-button" data-action="click->performances#translate"> ouvrir </button>
         </div>
-        <div class="back visibility" data-performances-target="flipedcardone">
+        <div class="back">
           <div class="pic-cont">
             <%= image_tag "Sauvage-1.jpg", class: "performance-pic seen-one" %>
             <%= image_tag "Sauvage-3.jpg", class: "performance-pic visibility", data: { performances_target: "sauvagethree" } %>

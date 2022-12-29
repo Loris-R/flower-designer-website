@@ -4,6 +4,14 @@
   position: relative;
   background-color: transparent;
   border: none;
+  -o-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .card-container {
@@ -27,33 +35,43 @@
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  transition: transform 300ms;
-  transition-timing-function: linear;
-  transform-origin: center center;
+  -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  -webkit-transition: transform 300ms;
-  -webkit-transition-timing-function: linear;
+  -ms-backface-visibility: hidden;
+  transform-origin: center center;
   -webkit-transform-origin: center center;
 }
 
 .card .front {
-  background: #4B515D;
+  background: #E8E9F3;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 4px;
+}
+
+.card .back {
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .white {
   color: white;
 }
 
+.grey {
+  color: #4B515D;
+}
+
 .shooting-name {
-  padding: 3rem;
+  padding: 4rem;
   font-size: xx-large;
 }
 
 .shooting {
-  padding: 68px;
+  padding: 34px;
 }
 
 .shooting-text {
@@ -63,21 +81,41 @@
 
 
 .flip {
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
+  transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
   visibility: unset;
 }
 
 
 .scaled-button {
-  width: 15px;
-  height: 15px;
-  -webkit-animation: scale 1750ms ease-in-out forwards;
-  animation: scale 1750ms ease-in-out forwards;
+  -webkit-animation: button 1600ms linear infinite alternate;
+  animation: button 1600ms linear infinite alternate;
   position: absolute;
+  border: none;
   bottom: 4rem;
+  border-radius: 7%;
+  background-color: #949fb45e;
+  font-size: xx-small;
+  color: white;
+  font-style: italic;
+  font-family: 'marigold_one';
+  letter-spacing: 0.6px;
+  padding: 4.2px 6px 3.2px 6px;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+@keyframes button {
+  0% {
+      transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+    }
+
+    100% {
+      transform: scale(2.0);
+      -webkit-transform: scale(2.0);
+    }
 }
 
 .pic-cont {
