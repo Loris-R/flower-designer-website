@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import PerformancesController from "./performances_controller"
+application.register("performances", PerformancesController)
