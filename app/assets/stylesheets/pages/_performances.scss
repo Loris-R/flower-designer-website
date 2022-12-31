@@ -159,6 +159,14 @@
   -ms-transform: translate(30em, 0);
 }
 
+.picture-two-close {
+  transform: translate(-15em, 0);
+  -webkit-transform: translate(-15em, 0);
+  -moz-transform: translate(-15em, 0);
+  -o-transform: translate(-15em, 0);
+  -ms-transform: translate(-15em, 0);
+}
+
 .picture-two {
   visibility: unset;
   transform: translate(-30em, 0);

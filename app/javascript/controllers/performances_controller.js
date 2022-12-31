@@ -26,14 +26,15 @@ export default class extends Controller {
     });
   }
 
-  close() {
+  close_one() {
     const flipcards = this.flipcardsTargets;
     const conttwo = this.conttwoTarget;
 
-    flipcards[0].classList.remove("flip");
+      flipcards[0].classList.remove("flip");
+
     setTimeout(() => {
       conttwo.classList.remove("card-up-down");
-    }, 500);
+    }, 1000);
   }
 
   show_shooting_two() {
