@@ -1,27 +1,52 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipcardone", "sauvagethree", "sauvagefour", "flipedcardtwo", "losmuertosone", "losmuertostwo"]
+  static targets = ["flipcards", "sauvagethree", "sauvagefour", "sauvagefive", "losmuertosone", "losmuertostwo", "buttons", "conttwo"]
 
-  translate() {
+  show_shooting_one() {
     const sauvagethree = this.sauvagethreeTarget;
     const sauvagefour = this.sauvagefourTarget;
-    const flipcardone = this.flipcardoneTarget;
+    const sauvagefive = this.sauvagefiveTarget;
+    const flipcards = this.flipcardsTargets;
+    const buttons = this.buttonsTargets;
+    const conttwo = this.conttwoTarget;
 
-    flipcardone.classList.toggle("flip");
+    conttwo.classList.add("card-up-down");
+    setTimeout(() => {
+      flipcards[0].classList.add("flip");
+    }, 1000);
 
-    flipcardone.addEventListener('transitionend', () => {
-      sauvagethree.classList.toggle("sauvage-three");
-      sauvagefour.classList.toggle("sauvage-four");
+    flipcards[0].addEventListener('transitionend', () => {
+      sauvagethree.classList.add("picture-one");
+      sauvagefour.classList.add("picture-two");
+      sauvagefive.classList.add("picture-three");
+      setTimeout(() => {
+        buttons[0].style.visibility = "visible";
+      }, 800);
     });
+  }
 
-    const flipedcardtwo = this.flipedcardtwoTarget;
+  close() {
+    const flipcards = this.flipcardsTargets;
+    const conttwo = this.conttwoTarget;
+
+    flipcards[0].classList.remove("flip");
+    setTimeout(() => {
+      conttwo.classList.remove("card-up-down");
+    }, 500);
+  }
+
+  show_shooting_two() {
     const losmuertosone = this.losmuertosoneTarget;
     const losmuertostwo = this.losmuertostwoTarget;
+    const flipcards = this.flipcardsTargets;
+    const frames = this.framesTargets;
 
-    flipedcardtwo.addEventListener('transitionend', () => {
-      losmuertosone.classList.toggle("losmuertos-one");
-      losmuertostwo.classList.toggle("losmuertos-two");
+    flipcards[1].classList.toggle("flip");
+    flipcards[1].addEventListener('transitionend', () => {
+      frames[0].
+      losmuertosone.classList.toggle("picture-one");
+      losmuertostwo.classList.toggle("picture-two");
     });
   }
 }
