@@ -1,7 +1,19 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipcards", "picturesgoright", "picturegoleft", "picturesgodown", "buttons", "conttwo"]
+  static targets = ["flipcards", "picturesgoright", "picturegoleft", "picturesgodown", "buttons", "frames"]
+
+  flipBack(shootingNumber) {
+    const flipcards = this.flipcardsTargets;
+    const frames = this.framesTargets;
+
+    flipcards[shootingNumber].classList.remove("flip");
+    setTimeout(() => {
+      frames.forEach(frame =>
+        frame.classList.remove("card-menu-down")
+      );
+    }, 1000);
+  }
 
   show_shooting_one() {
     const picturesgoright = this.picturesgorightTargets;
@@ -9,12 +21,15 @@ export default class extends Controller {
     const picturesgodown = this.picturesgodownTargets;
     const flipcards = this.flipcardsTargets;
     const buttons = this.buttonsTargets;
-    const conttwo = this.conttwoTarget;
+    const frames = this.framesTargets;
 
-    conttwo.classList.add("card-menu-down");
+    frames.forEach(frame =>
+      frame.classList.add("card-menu-down")
+      );
+
     setTimeout(() => {
       flipcards[0].classList.add("flip");
-    }, 1000);
+    }, 1500);
 
     flipcards[0].addEventListener('transitionend', () => {
       picturesgoright[0].classList.add("picture-to-right");
@@ -27,20 +42,13 @@ export default class extends Controller {
   }
 
   close_one() {
-    const flipcards = this.flipcardsTargets;
-    const conttwo = this.conttwoTarget;
-
-      flipcards[0].classList.remove("flip");
-
-    setTimeout(() => {
-      conttwo.classList.remove("card-menu-down");
-    }, 1000);
+    this.flipBack(0);
   }
 
   close_two(){
     const flipcards = this.flipcardsTargets;
+    this.flipBack(1);
 
-    flipcards[1].classList.remove("flip");
     setTimeout(() => {
       flipcards[0].style.top = "0rem";
     }, 1000);
@@ -50,12 +58,17 @@ export default class extends Controller {
     const picturesgodown = this.picturesgodownTargets;
     const flipcards = this.flipcardsTargets;
     const buttons = this.buttonsTargets;
+    const frames = this.framesTargets;
 
     flipcards[0].style.top = "4.1rem";
+    frames.splice(0, 1);
+    frames.forEach(frame =>
+      frame.classList.add("card-menu-down")
+    );
 
     setTimeout(() => {
       flipcards[1].classList.add("flip");
-    }, 1000);
+    }, 1500);
 
     flipcards[1].addEventListener('transitionend', () => {
       picturesgodown[1].classList.add("picture-to-down");

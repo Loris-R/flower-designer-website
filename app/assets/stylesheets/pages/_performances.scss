@@ -1,3 +1,7 @@
+.page-performance {
+  overflow: auto;
+}
+
 .card {
   height: 562px;
   width: 372.4px;
@@ -13,10 +17,6 @@
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
-
-.allframe {
-  overflow-y: auto;
 }
 
 .card-container {
