@@ -1,25 +1,25 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipcards", "sauvagethree", "sauvagefour", "sauvagefive", "losmuertosone", "losmuertostwo", "buttons", "conttwo"]
+  static targets = ["flipcards", "picturesgoright", "picturegoleft", "picturesgodown", "buttons", "conttwo"]
 
   show_shooting_one() {
-    const sauvagethree = this.sauvagethreeTarget;
-    const sauvagefour = this.sauvagefourTarget;
-    const sauvagefive = this.sauvagefiveTarget;
+    const picturesgoright = this.picturesgorightTargets;
+    const picturegoleft = this.picturegoleftTarget;
+    const picturesgodown = this.picturesgodownTargets;
     const flipcards = this.flipcardsTargets;
     const buttons = this.buttonsTargets;
     const conttwo = this.conttwoTarget;
 
-    conttwo.classList.add("card-up-down");
+    conttwo.classList.add("card-menu-down");
     setTimeout(() => {
       flipcards[0].classList.add("flip");
     }, 1000);
 
     flipcards[0].addEventListener('transitionend', () => {
-      sauvagethree.classList.add("picture-one");
-      sauvagefour.classList.add("picture-two");
-      sauvagefive.classList.add("picture-three");
+      picturesgoright[0].classList.add("picture-to-right");
+      picturegoleft.classList.add("picture-to-left");
+      picturesgodown[0].classList.add("picture-to-down");
       setTimeout(() => {
         buttons[0].style.visibility = "visible";
       }, 800);
@@ -33,21 +33,35 @@ export default class extends Controller {
       flipcards[0].classList.remove("flip");
 
     setTimeout(() => {
-      conttwo.classList.remove("card-up-down");
+      conttwo.classList.remove("card-menu-down");
+    }, 1000);
+  }
+
+  close_two(){
+    const flipcards = this.flipcardsTargets;
+
+    flipcards[1].classList.remove("flip");
+    setTimeout(() => {
+      flipcards[0].style.top = "0rem";
     }, 1000);
   }
 
   show_shooting_two() {
-    const losmuertosone = this.losmuertosoneTarget;
-    const losmuertostwo = this.losmuertostwoTarget;
+    const picturesgodown = this.picturesgodownTargets;
     const flipcards = this.flipcardsTargets;
-    const frames = this.framesTargets;
+    const buttons = this.buttonsTargets;
 
-    flipcards[1].classList.toggle("flip");
+    flipcards[0].style.top = "4.1rem";
+
+    setTimeout(() => {
+      flipcards[1].classList.add("flip");
+    }, 1000);
+
     flipcards[1].addEventListener('transitionend', () => {
-      frames[0].
-      losmuertosone.classList.toggle("picture-one");
-      losmuertostwo.classList.toggle("picture-two");
+      picturesgodown[1].classList.add("picture-to-down");
+      setTimeout(() => {
+        buttons[1].style.visibility = "visible";
+      }, 800);
     });
   }
 }

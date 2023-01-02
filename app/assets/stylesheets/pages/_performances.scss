@@ -2,6 +2,7 @@
   height: 562px;
   width: 372.4px;
   position: relative;
+  top: 0rem;
   background-color: transparent;
   border: none;
   -o-transition: all 1s ease-in-out;
@@ -14,7 +15,11 @@
   transform-style: preserve-3d;
 }
 
-.card-container, .card-container-two {
+.allframe {
+  overflow-y: auto;
+}
+
+.card-container {
   perspective: 1000;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -25,15 +30,10 @@
   border: 1px solid #4B515D;
 }
 
-.card-container-two {
-  position: relative;
-  bottom: 33rem;
-}
-
 .frame-shooting {
-  display: flex;
+  display:grid;
   justify-content: center;
-  margin-bottom: 2rem;
+  grid-template-rows: 66px;
 }
 
 .front, .back {
@@ -78,6 +78,7 @@
 
 .shooting {
   padding: 34px;
+  cursor: pointer;
 }
 
 .shooting-text {
@@ -102,6 +103,7 @@
   -webkit-animation: button 1600ms linear infinite alternate;
   animation: button 1600ms linear infinite alternate;
   position: absolute;
+  cursor: pointer;
   border: none;
   bottom: 4rem;
   border-radius: 7%;
@@ -150,7 +152,7 @@
  -o-transition: 1s ease-in-out;
 }
 
-.picture-one {
+.picture-to-right {
   visibility: unset;
   transform: translate(30em, 0);
   -webkit-transform: translate(30em, 0);
@@ -159,15 +161,7 @@
   -ms-transform: translate(30em, 0);
 }
 
-.picture-two-close {
-  transform: translate(-15em, 0);
-  -webkit-transform: translate(-15em, 0);
-  -moz-transform: translate(-15em, 0);
-  -o-transform: translate(-15em, 0);
-  -ms-transform: translate(-15em, 0);
-}
-
-.picture-two {
+.picture-to-left {
   visibility: unset;
   transform: translate(-30em, 0);
   -webkit-transform: translate(-30em, 0);
@@ -176,7 +170,7 @@
   -ms-transform: translate(-30em, 0);
 }
 
-.picture-three {
+.picture-to-down {
   visibility: unset;
   transform: translate(-14.5em, 41em);
   -webkit-transform: translate(-14.5em, 41em);
@@ -185,19 +179,26 @@
   -ms-transform: translate(-14.5em, 41em);
 }
 
+.picture-to-left-big {
+  visibility: unset;
+  transform: translate(-27em, 0);
+  -webkit-transform: translate(-27em, 0);
+  -moz-transform: translate(-27em, 0);
+  -o-transform: translate(-27em, 0);
+  -ms-transform: translate(-27em, 0);
+}
 .back-but {
   visibility: hidden;
-  bottom: -3rem;
+  bottom: -3.6rem;
   left: 43%;
 }
 
-.card-up-down {
+.card-menu-down {
   transform: translate(0, 79rem);
   -webkit-transform: translate(0, 79rem);
   -moz-transform: translate(0, 79rem);
   -o-transform: translate(0, 79rem);
   -ms-transform: translate(0, 79rem);
-
 }
 
 .front-but {

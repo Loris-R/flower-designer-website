@@ -12,9 +12,9 @@
         <div class="back">
           <div class="pic-cont">
             <%= image_tag "Sauvage-1.jpg", class: "performance-pic seen-one" %>
-            <%= image_tag "Sauvage-3.jpg", class: "performance-pic visibility", data: { performances_target: "sauvagethree" } %>
-            <%= image_tag "Sauvage-4.jpg", class: "performance-pic visibility", data: { performances_target: "sauvagefour" } %>
-            <%= image_tag "Sauvage 2.jpg", class: "performance-pic visibility", data: { performances_target: "sauvagefive" } %>
+            <%= image_tag "Sauvage-3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+            <%= image_tag "Sauvage-4.jpg", class: "performance-pic visibility", data: { performances_target: "picturegoleft" } %>
+            <%= image_tag "Sauvage 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
             <button class= "scaled-button back-but" data-action="click->performances#close_one" data-performances-target="buttons"> fermer </button>
           </div>
         </div>
@@ -22,24 +22,25 @@
     </div>
   </div>
   <div class="frame-shooting">
-    <div class="card-container-two" data-performances-target="conttwo">
+    <div class="card-container" data-performances-target="conttwo">
       <div class="card" data-performances-target="flipcards">
-        <div class="front" data-performances-target="fronts">
-          <h6 class="grey shooting"> 2ème shooting </h6>
+        <div class="front">
+          <h6 class="grey shooting" data-action="click->performances#show_shooting_two"> 2ème shooting </h6>
           <h6 class="grey shooting-name align"> "Dia de los muertos" </h6>
           <p class="grey shooting-text"> Octobre 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
         </div>
         <div class="back">
           <div class="pic-cont">
-            <%= image_tag "Dia-de-los-muertos-1.jpg", class: "performance-pic seen-one", data: { performances_target: "losmuertosone" } %>
-            <%= image_tag "Dia-de-los-muertos-2.jpg", class: "performance-pic visibility", data: { performances_target: "losmuertostwo" } %>
+            <%= image_tag "Dia-de-los-muertos-1.jpg", class: "performance-pic seen-one" %>
+            <%= image_tag "Dia-de-los-muertos-2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
+            <button class= "scaled-button back-but" data-action="click->performances#close_two" data-performances-target="buttons"> fermer </button>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="frame-shooting">
-    <div class="card-container">
+    <div class="card-container"  data-performances-target="conttwo">
       <div class="card" data-performances-target="flipcards">
         <div class="front">
           <h6 class="grey shooting"> 3ème shooting </h6>
