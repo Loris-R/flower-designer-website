@@ -15,37 +15,59 @@ export default class extends Controller {
     }, 1000);
   }
 
-  show_shooting_one() {
-    const picturesgoright = this.picturesgorightTargets;
-    const picturegoleft = this.picturegoleftTarget;
-    const picturesgodown = this.picturesgodownTargets;
-    const flipcards = this.flipcardsTargets;
-    const buttons = this.buttonsTargets;
+  openFlip(shootingNumber) {
     const frames = this.framesTargets;
+    const picturesgodown = this.picturesgodownTargets;
+    const buttons = this.buttonsTargets;
+    const flipcards = this.flipcardsTargets;
+
+    if(shootingNumber !== 0) {
+      frames.splice(0, shootingNumber);
+    }
 
     frames.forEach(frame =>
       frame.classList.add("card-menu-down")
-      );
+    );
 
     setTimeout(() => {
-      flipcards[0].classList.add("flip");
+      flipcards[shootingNumber].classList.add("flip");
     }, 1500);
+
+    flipcards[shootingNumber].addEventListener('transitionend', () => {
+      picturesgodown[shootingNumber].classList.add("picture-to-down");
+      setTimeout(() => {
+        buttons[shootingNumber].style.visibility = "visible";
+      }, 800);
+    });
+  }
+
+  show_shooting_one() {
+    const picturesgoright = this.picturesgorightTargets;
+    const picturegoleft = this.picturegoleftTarget;
+    const flipcards = this.flipcardsTargets;
+
+    this.openFlip(0);
 
     flipcards[0].addEventListener('transitionend', () => {
       picturesgoright[0].classList.add("picture-to-right");
       picturegoleft.classList.add("picture-to-left");
-      picturesgodown[0].classList.add("picture-to-down");
-      setTimeout(() => {
-        buttons[0].style.visibility = "visible";
-      }, 800);
     });
+  }
+
+  show_shooting_two() {
+    const flipcards = this.flipcardsTargets;
+    const frames = this.framesTargets;
+
+    flipcards[0].style.top = "4.1rem";
+
+    this.openFlip(1);
   }
 
   close_one() {
     this.flipBack(0);
   }
 
-  close_two(){
+  close_two() {
     const flipcards = this.flipcardsTargets;
     this.flipBack(1);
 
@@ -54,27 +76,4 @@ export default class extends Controller {
     }, 1000);
   }
 
-  show_shooting_two() {
-    const picturesgodown = this.picturesgodownTargets;
-    const flipcards = this.flipcardsTargets;
-    const buttons = this.buttonsTargets;
-    const frames = this.framesTargets;
-
-    flipcards[0].style.top = "4.1rem";
-    frames.splice(0, 1);
-    frames.forEach(frame =>
-      frame.classList.add("card-menu-down")
-    );
-
-    setTimeout(() => {
-      flipcards[1].classList.add("flip");
-    }, 1500);
-
-    flipcards[1].addEventListener('transitionend', () => {
-      picturesgodown[1].classList.add("picture-to-down");
-      setTimeout(() => {
-        buttons[1].style.visibility = "visible";
-      }, 800);
-    });
-  }
 }
