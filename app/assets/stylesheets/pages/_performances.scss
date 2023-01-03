@@ -1,9 +1,13 @@
+.page-performance {
+  overflow: overlay;
+}
+
 .card {
-  height: 562px;
-  width: 372.4px;
+  height: 555px;
+  width: 364.3px;
   position: relative;
-  background-color: transparent;
-  border: none;
+  top: 0rem;
+  border: 1px solid #4B515D;
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -25,9 +29,9 @@
 }
 
 .frame-shooting {
-  display: flex;
+  display:grid;
   justify-content: center;
-  margin-bottom: 2rem;
+  grid-template-rows: 50px;
 }
 
 .front, .back {
@@ -43,7 +47,6 @@
 }
 
 .card .front {
-  background: #E8E9F3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,16 +69,14 @@
 }
 
 .shooting-name {
-  padding: 4rem;
-  font-size: xx-large;
-}
-
-.shooting {
-  padding: 34px;
+  padding: 1rem;
+  font-size: larger;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .shooting-text {
-  padding: 47px;
+  padding: 213px 60px;
   text-align: center;
 }
 
@@ -96,6 +97,7 @@
   -webkit-animation: button 1600ms linear infinite alternate;
   animation: button 1600ms linear infinite alternate;
   position: absolute;
+  cursor: pointer;
   border: none;
   bottom: 4rem;
   border-radius: 7%;
@@ -144,7 +146,7 @@
  -o-transition: 1s ease-in-out;
 }
 
-.sauvage-three {
+.picture-to-right {
   visibility: unset;
   transform: translate(30em, 0);
   -webkit-transform: translate(30em, 0);
@@ -153,7 +155,7 @@
   -ms-transform: translate(30em, 0);
 }
 
-.sauvage-four {
+.picture-to-left {
   visibility: unset;
   transform: translate(-30em, 0);
   -webkit-transform: translate(-30em, 0);
@@ -162,22 +164,77 @@
   -ms-transform: translate(-30em, 0);
 }
 
-.losmuertos-one {
+.picture-to-down {
   visibility: unset;
-  transform: translate(30em, 0);
-  -webkit-transform: translate(30em, 0);
-  -moz-transform: translate(30em, 0);
-  -o-transform: translate(30em, 0);
-  -ms-transform: translate(30em, 0);
+  transform: translate(-14.5em, 41em);
+  -webkit-transform: translate(-14.5em, 41em);
+  -moz-transform: translate(-14.5em, 41em);
+  -o-transform: translate(-14.5em, 41em);
+  -ms-transform: translate(-14.5em, 41em);
 }
 
-.losmuertos-two {
+.picture-big-to-downer {
   visibility: unset;
-  transform: translate(-30em, 0);
-  -webkit-transform: translate(-30em, 0);
-  -moz-transform: translate(-30em, 0);
-  -o-transform: translate(-30em, 0);
-  -ms-transform: translate(-30em, 0);
+  transform: translate(0em, 80em);
+  -webkit-transform: translate(0em, 80em);
+  -moz-transform: translate(0em, 80em);
+  -o-transform: translate(0em, 80em);
+  -ms-transform: translate(0em, 80em);
+}
+
+.picture-to-down-left {
+  visibility: unset;
+  transform: translate(-14em, 80em);
+  -webkit-transform: translate(-14em, 80em);
+  -moz-transform: translate(-14em, 80em);
+  -o-transform: translate(-14em, 80em);
+  -ms-transform: translate(-14em, 80em);
+}
+
+.picture-to-down-right {
+  visibility: unset;
+  transform: translate(14em, 80em);
+  -webkit-transform: translate(14em, 80em);
+  -moz-transform: translate(14em, 80em);
+  -o-transform: translate(14em, 80em);
+  -ms-transform: translate(14em, 80em);
+}
+
+.picture-to-down-downer {
+  visibility: unset;
+  transform: translate(-14.5em, 119em);
+  -webkit-transform: translate(-14.5em, 119em);
+  -moz-transform: translate(-14.5em, 119em);
+  -o-transform: translate(-14.5em, 119em);
+  -ms-transform: translate(-14.5em, 119em);
+}
+
+
+.picture-to-left-big {
+  visibility: unset;
+  transform: translate(-27em, 0);
+  -webkit-transform: translate(-27em, 0);
+  -moz-transform: translate(-27em, 0);
+  -o-transform: translate(-27em, 0);
+  -ms-transform: translate(-27em, 0);
+}
+.back-but {
+  visibility: hidden;
+  bottom: -3.6rem;
+  left: 43%;
+}
+
+.card-menu-down {
+  visibility: hidden;
+}
+
+.index {
+  z-index: 200;
+}
+
+.front-but {
+  backface-visibility: unset;
+  -moz-backface-visibility: unset;
 }
 
 .title-performance {
