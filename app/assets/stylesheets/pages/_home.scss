@@ -241,3 +241,27 @@ body {
 .p-parcours {
   margin-right: 71px;
 }
+
+@media only screen and (min-width:279px) and (max-width:849px) {
+
+  .home-page {
+    width: 100vw;
+    background-size: 100vh;
+    background-position: 37% 0%;
+  }
+
+  .icon {
+    top: 27px;
+    right: 40px;
+  }
+
+  .concept-title {
+    padding: 6rem 3rem;
+  }
+
+  .concept-part {
+    flex-direction: column;
+  }
+
+
+}
