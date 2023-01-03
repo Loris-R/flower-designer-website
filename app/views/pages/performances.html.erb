@@ -2,12 +2,11 @@
   <h1 class="title-performance white"> Performances </h1>
   <p class="text-performance white"> C'est sur l'île de la Réunion, en avril 2019 que je réalise mon premier shooting d'art floral. Poussée par mon ami Ghjuliu Mattei, photographe, nous réalisons ensemble, notre première collaboration. Je voulais mettre en scène une femme plongée dans cette faune incroyable pour mettre mes créations en avant. Ma satisfaction fut tellement forte que je décide alors de réitérer l'expérience sur des thèmes tous aussi différents les uns que les autres. Pour moi, c'est le moyen le plus fort d'expression en art floral. J'aime créer ces ambiances, réfléchir au moindre détail, mélanger les textures et les couleurs de façon à obtenir un tableau parfait </p>
   <div class="allframe" data-controller="performances">
-    <div class="frame-shooting">
+    <div class="frame-shooting" data-performances-target="allframe">
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting" data-action="click->performances#show_shooting_one"> 1er shooting </h6>
-            <h6 class="grey shooting-name"> "Sauvage" </h6>
+            <h6 class="grey shooting-name" data-action="click->performances#show_shooting_one"> "Sauvage"</h6>
             <p class="grey shooting-text"> Avril 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
           </div>
           <div class="back">
@@ -22,12 +21,11 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting"  data-performances-target="frames">
+    <div class="frame-shooting" data-performances-target="frames">
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting" data-action="click->performances#show_shooting_two"> 2ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Dia de los muertos" </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_two">"Dia de los muertos" </h6>
             <p class="grey shooting-text"> Octobre 2019, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei </p>
           </div>
           <div class="back">
@@ -44,8 +42,7 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"  data-action="click->performances#show_shooting_three"> 3ème shooting </h6>
-            <h6 class="grey shooting-name"> "Svitlana" </h6>
+            <h6 class="grey shooting-name"  data-action="click->performances#show_shooting_three"> "Svitlana" </h6>
             <p class="grey shooting-text"> Juillet 2020, île de Béhuard, Maine et Loire. <br> crédit photo: Ghjuliu Mattei  </p>
           </div>
           <div class="back">
@@ -62,8 +59,7 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting" data-action="click->performances#show_shooting_four"> 4ème shooting </h6>
-            <h6 class="grey shooting-name align"> "La mariée de Kyoto" </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_four"> "La mariée de Kyoto" </h6>
             <p class="grey shooting-text"> Mars 2021, Parc de Maulévrier, Maine et Loire.<br> crédit photo: Capturer l'instant- Johanna. </p>
           </div>
           <div class="back">
@@ -83,8 +79,7 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting" data-action="click->performances#show_shooting_five"> 5ème shooting </h6>
-            <h6 class="grey shooting-name align"> </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_five"> "shooting floral" </h6>
             <p class="grey shooting-text"> Avril 2021, Marseille. <br> Crédit photo: MKT photographie. </p>
           </div>
           <div class="back">
@@ -93,8 +88,8 @@
               <%= image_tag "Shoot Floral 2.jpg", class: "performance-pic visibility", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" }  %>
               <%= image_tag "Shoot Floral 4.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
               <%= image_tag "Shoot Floral 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
-              <%= image_tag "Shoot Floral 5.jpg", class: "performance-pic visibility", data: { performances_target: "picturegodownerleft" } %>
-              <%= image_tag "Shoot-floral-6.jpg", class: "performance-pic visibility", data: { performances_target: "picturegodownerright" } %>
+              <%= image_tag "Shoot Floral 5.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerleft" } %>
+              <%= image_tag "Shoot-floral-6.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerright" } %>
               <button class= "scaled-button back-but" data-action="click->performances#close_five" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
@@ -105,8 +100,7 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"  data-action="click->performances#show_shooting_six"> 6ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Amazone"  </h6>
+            <h6 class="grey shooting-name align"  data-action="click->performances#show_shooting_six"> "Amazone" </h6>
             <p class="grey shooting-text"> janvier 2022, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei. </p>
           </div>
           <div class="back">
@@ -123,15 +117,14 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"> 7ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Didi Disco"  </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_seven"> "Didi Disco" </h6>
             <p class="grey shooting-text"> Janvier 2022, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button" data-action="click->performances#tranlate-seven"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Didi Disco 1.jpg", class: "performance-pic seen-one"%>
-              <%= image_tag "Didi Disco 2.jpg", class: "performance-pic visibility" %>
+              <%= image_tag "Didi Disco 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <button class= "scaled-button back-but" data-action="click->performances#close_seven" data-performances-target="buttons"> fermer  </button>
             </div>
           </div>
         </div>
@@ -141,15 +134,14 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"> 8ème shooting </h6>
-            <h6 class="grey shooting-name align"> "La fille de l'étang"   </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_eight"> "La fille de l'étang" </h6>
             <p class="grey shooting-text"> Février 2022, île de la Réunion. <br> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button" data-action="click->performances#tranlate-eight"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "La fille de l'étang 1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "La fille de l'étang 2.jpg", class: "performance-pic visibility" %>
+              <%= image_tag "La fille de l'étang 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <button class= "scaled-button back-but" data-action="click->performances#close_eight" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
@@ -159,16 +151,15 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"> 9ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Aurus"  </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_nine"> "Aurus"  </h6>
             <p class="grey shooting-text"> février 2022, île de la Réunion, avec le talentueux Aurus. <br> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button" data-action="click->performances#tranlate-nine"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Aurus 1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Aurus 2.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Aurus 3.jpg", class: "performance-pic visibility" %>
+              <%= image_tag "Aurus 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <%= image_tag "Aurus 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
+              <button class= "scaled-button back-but" data-action="click->performances#close_nine" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
@@ -178,39 +169,21 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"> 9ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Aurus"  </h6>
-            <p class="grey shooting-text"> février 2022, île de la Réunion, avec le talentueux Aurus. <br> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button" data-action="click->performances#tranlate-nine"> ouvrir </button>
-          </div>
-          <div class="back">
-            <div class="pic-cont">
-              <%= image_tag "Aurus 1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Aurus 2.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Aurus 3.jpg", class: "performance-pic visibility" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="frame-shooting" data-performances-target="frames">
-      <div class="card-container">
-        <div class="card" data-performances-target="flipcards">
-          <div class="front">
-            <h6 class="grey shooting"> 10ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Bijoux du monde"  </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_ten"> "Bijoux du monde" </h6>
             <p class="grey shooting-text"> Août 2022, La Pointe, Maine et Loire. <br> Crédit photo: Douceur angevine photographe. </p>
-            <button class= "scaled-button" data-action="click->performances#tranlate-ten"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Bijoux du monde 1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Bijoux du monde 2.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Bijoux du monde 3.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Bijoux du monde 4.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Bijoux du monde 5.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Bijoux du monde 6.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Bijoux du monde 7.jpg", class: "performance-pic visibility" %>
+              <%= image_tag "Bijoux du monde 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <%= image_tag "Bijoux du monde 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
+              <%= image_tag "Bijoux du monde 7.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
+              <%= image_tag "Bijoux du monde 5.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerleft" }%>
+              <%= image_tag "Bijoux du monde 4.jpg", class: "performance-pic visibility", data: { performances_target:
+              "picturesgodownerright" } %>
+              <%= image_tag "Bijoux du monde 6.jpg", class: "performance-pic visibility", data: { performances_target:
+              "picturegodownertodowner" } %>
+              <button class= "scaled-button back-but" data-action="click->performances#close_ten" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
@@ -220,16 +193,15 @@
       <div class="card-container">
         <div class="card" data-performances-target="flipcards">
           <div class="front">
-            <h6 class="grey shooting"> 11ème shooting </h6>
-            <h6 class="grey shooting-name align"> "Super Lily" </h6>
+            <h6 class="grey shooting-name align" data-action="click->performances#show_shooting_eleven"> "Super Lily" </h6>
             <p class="grey shooting-text"> octobre 2022 à Angers. <br> Crédit photo : Douceur Angevine photographie.</p>
-            <button class= "scaled-button" data-action="click->performances#tranlate-eleven"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Super Lily 1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Super Lily 2.jpg", class: "performance-pic visibility" %>
-              <%= image_tag "Super Lily 3.jpg", class: "performance-pic visibility" %>
+              <%= image_tag "Super Lily 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <%= image_tag "Super Lily 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
+              <button class= "scaled-button back-but" data-action="click->performances#close_eleven" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>

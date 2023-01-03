@@ -1,10 +1,10 @@
 .page-performance {
-  overflow: auto;
+  overflow: overlay;
 }
 
 .card {
-  height: 562px;
-  width: 372.4px;
+  height: 555px;
+  width: 364.3px;
   position: relative;
   top: 0rem;
   background-color: transparent;
@@ -32,7 +32,7 @@
 .frame-shooting {
   display:grid;
   justify-content: center;
-  grid-template-rows: 66px;
+  grid-template-rows: 50px;
 }
 
 .front, .back {
@@ -71,17 +71,14 @@
 }
 
 .shooting-name {
-  padding: 4rem;
-  font-size: xx-large;
-}
-
-.shooting {
-  padding: 34px;
+  padding: 1rem;
+  font-size: larger;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .shooting-text {
-  padding: 47px;
+  padding: 213px 60px;
   text-align: center;
 }
 
@@ -204,6 +201,16 @@
   -o-transform: translate(14em, 80em);
   -ms-transform: translate(14em, 80em);
 }
+
+.picture-to-down-downer {
+  visibility: unset;
+  transform: translate(-14.5em, 119em);
+  -webkit-transform: translate(-14.5em, 119em);
+  -moz-transform: translate(-14.5em, 119em);
+  -o-transform: translate(-14.5em, 119em);
+  -ms-transform: translate(-14.5em, 119em);
+}
+
 
 .picture-to-left-big {
   visibility: unset;
