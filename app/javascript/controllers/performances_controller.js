@@ -43,7 +43,7 @@ export default class extends Controller {
 
     setTimeout(() => {
       flipcards[shootingNumber].classList.add("flip");
-    }, 1500);
+    }, 2500);
 
     setTimeout(() => {
       buttons[shootingNumber].style.visibility = "visible";
