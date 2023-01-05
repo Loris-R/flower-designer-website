@@ -242,7 +242,7 @@ body {
   margin-right: 71px;
 }
 
-@media only screen and (min-width:279px) and (max-width:849px) {
+@media only screen and (min-width:279px) and (max-width:900px) {
 
   .home-page {
     width: 100vw;
@@ -279,10 +279,6 @@ body {
     margin: 4rem 0;
   }
 
-  .concept-photo, .photo-parcours {
-    width: 100vw;
-  }
-
   .footer {
     margin-top: 0;
   }
@@ -305,5 +301,12 @@ body {
 
   .center_menu {
     margin-right: 0;
+  }
+}
+
+@media only screen and (min-width:279px) and (max-width:405px) {
+
+  .concept-photo, .photo-parcours {
+    width: 100vw;
   }
 }
