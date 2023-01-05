@@ -241,3 +241,72 @@ body {
 .p-parcours {
   margin-right: 71px;
 }
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+
+  .home-page {
+    width: 100vw;
+    background-size: 100vh;
+    background-position: 37% 0%;
+  }
+
+  .icon {
+    top: 8px;
+    right: 21px;
+  }
+
+  .concept-title, .parcours-title {
+    padding: 4rem 3rem;
+  }
+
+  .concept-part {
+    flex-direction: column;
+  }
+
+  .parcours-part {
+    flex-direction: column-reverse;
+  }
+
+  .parcours-part, .concept-part {
+    align-items: center;
+  }
+
+  .p-concept, .p-parcours {
+    margin-right: unset;
+    margin-left: unset;
+    width: 80vw;
+    text-align: center;
+    margin: 4rem 0;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+
+  #scale-logo {
+    width: 100vw;
+  }
+
+  .optionshome {
+    flex-direction: column;
+    top: 0;
+    height: 275px;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .open {
+    right: 0;
+  }
+
+  .center_menu {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width:279px) and (max-width:405px) {
+
+  .concept-photo, .photo-parcours {
+    width: 100vw;
+  }
+}
