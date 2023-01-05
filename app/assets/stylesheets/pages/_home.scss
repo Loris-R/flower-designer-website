@@ -290,6 +290,7 @@ body {
   .optionshome {
     flex-direction: column;
     top: 0;
+    right: 0;
     height: 275px;
     text-align: center;
     width: 100vw;
@@ -301,6 +302,27 @@ body {
 
   .center_menu {
     margin-right: 0;
+  }
+
+  .facebook {
+    height: 37px;
+    margin-bottom: 9px;
+  }
+
+  .insta {
+    height: 37px;
+  }
+
+  .logo {
+    margin-right: 19px;
+  }
+
+  .background {
+    height: 274px;
+  }
+
+  .open-menu-on-pages {
+    right: 0;
   }
 }
 
