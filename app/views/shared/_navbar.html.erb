@@ -8,7 +8,7 @@
         <i class="light_icon icons"> </i>
       </div>
     </div>
-    <div class="optionshome <%= "hidemenu" if current_page?(root_path) %> <%= "open-menu-on-pages" unless current_page?(root_path)%>" data-navbar-target="optionshome">
+    <div class="optionshome <%= "hidemenu" if current_page?(root_path) %> <%= "open-menu-on-pages" unless current_page?(root_path) %>" data-navbar-target="optionshome">
       <% unless current_page?(root_path) %>
         <%= link_to "Acceuil", root_path, class: "language_link" %>
       <% end %>
@@ -19,9 +19,6 @@
       <%= link_to "L'atelier", atelier_path, class: "language_link" %>
       <%= link_to "Contact", contact_path, class: "language_link center_menu" %>
     </div>
-    <% unless current_page?(root_path) %>
-      <div class="line"></div>
-    <% end %>
   </div>
   <% if current_page?(root_path) %>
     <div id="scale-logo" data-navbar-target="tophome">
