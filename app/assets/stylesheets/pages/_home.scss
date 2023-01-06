@@ -290,10 +290,10 @@ body {
   .optionshome {
     flex-direction: column;
     top: 0;
-    right: 0;
-    height: 275px;
+    height: 319px;
     text-align: center;
     width: 100vw;
+    background-color: #962e50;
   }
 
   .open {
@@ -302,6 +302,7 @@ body {
 
   .center_menu {
     margin-right: 0;
+    margin-bottom: 1rem;
   }
 
   .facebook {
@@ -318,12 +319,22 @@ body {
   }
 
   .background {
-    height: 274px;
+    height: unset;
   }
 
   .open-menu-on-pages {
     right: 0;
   }
+
+  .language_link {
+    margin-top: 1rem;
+    padding: unset;
+  }
+
+  .p-footer {
+    font-size: small;
+  }
+
 }
 
 @media only screen and (min-width:279px) and (max-width:405px) {

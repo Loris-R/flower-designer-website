@@ -5,6 +5,11 @@ export default class extends Controller {
 
   connect() {
     const icon = this.iconTarget;
+    const optionshome = this.optionshomeTarget;
+
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      optionshome.classList.remove("open-menu-on-pages");
+    };
 
     function fadeOutDelay(tophome) {
       function fadeOut() {
@@ -47,7 +52,7 @@ export default class extends Controller {
     } else {
       icon.classList.toggle("move");
       optionshome.classList.toggle("open");
-    }
+    };
 
     if (optionshome.classList.contains("open")){
       optionshome.ontransitionend = () => {
