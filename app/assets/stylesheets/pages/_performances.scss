@@ -2,6 +2,13 @@
   overflow: overlay;
 }
 
+.allframe {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 26px;
+  justify-content: center;
+}
+
 .card {
   height: 555px;
   width: 364.3px;
@@ -25,12 +32,6 @@
   position: relative;
   height: 562px;
   width: 372.4px;
-}
-
-.frame-shooting {
-  display:grid;
-  justify-content: center;
-  grid-template-rows: 50px;
 }
 
 .front, .back {
@@ -64,7 +65,7 @@
 }
 
 .grey {
-  color: #4B515D;
+  color: black;
 }
 
 .shooting-name {
@@ -75,7 +76,6 @@
 }
 
 .shooting-text {
-  padding: 213px 60px;
   text-align: center;
 }
 
@@ -245,4 +245,74 @@
 .text-performance {
   padding: 5em;
   text-align: center;
+}
+
+.card-one {
+  background-image: url(Sauvage-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-two {
+  background-image: url(Dia-de-los-muertos-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-three {
+  background-image: url(Couronne-Slave-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.svitlana-text {
+  padding: 0 1em;
+}
+
+.card-four {
+  background-image: url(La-mariée-de-Kyoto-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-five {
+  background-image: url(Shoot-Floral-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-six {
+  background-image: url(Amazone-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-seven {
+  background-image: url(Didi-Disco-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-eight {
+  background-image: url(La-fille-de-l-étang-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-nine {
+  background-image: url(Aurus-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-ten {
+  background-image: url(Bijoux-du-monde-4.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-eleven {
+  background-image: url(Super-Lily-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
 }
