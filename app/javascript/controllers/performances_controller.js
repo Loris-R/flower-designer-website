@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipcards", "picturesgoright", "picturesgoleft", "picturesgodown", "buttons", "frames", "picturegodowner", "picturesgodownerleft", "picturesgodownerright", "allframe", "picturegodownertodowner"]
+  static targets = ["flipcards", "picturesgoright", "picturesgomoreright", "picturesgodown", "buttons", "frames", "picturegodowner", "picturesgodownerleft", "picturesgodownerright", "picturegodownertodowner"]
 
   flipBack(shootingNumber, cardsNumber) {
     const flipcards = this.flipcardsTargets;
@@ -24,35 +24,22 @@ export default class extends Controller {
   }
 
   openFlip(shootingNumber) {
-    const frames = this.framesTargets;
     const buttons = this.buttonsTargets;
     const flipcards = this.flipcardsTargets;
-    const allframe = this.allframeTarget;
 
-    if(shootingNumber !== 0) {
-      frames.splice(0, shootingNumber);
-    };
+    const cards = flipcards.filter(flipcard => flipcard !== flipcards[shootingNumber]);
 
-    frames.forEach(frame =>
-      frame.classList.add("card-menu-down")
-    );
+    cards.forEach(card => card.classList.add("fade"));
 
-   setTimeout(() => {
-     allframe.scrollIntoView({behavior: "smooth"});
-   }, 1000);
+    flipcards[shootingNumber].classList.add("flip");
 
-    setTimeout(() => {
-      flipcards[shootingNumber].classList.add("flip");
-    }, 2500);
-
-    setTimeout(() => {
-      buttons[shootingNumber].style.visibility = "visible";
-    }, 800);
+    buttons[shootingNumber].style.visibility = "visible";
   }
+
 
   show_shooting_one() {
     const picturesgoright = this.picturesgorightTargets;
-    const picturesgoleft = this.picturesgoleftTargets;
+    const picturesgomoreright = this.picturesgomorerightTargets;
     const picturesgodown = this.picturesgodownTargets;
     const flipcards = this.flipcardsTargets;
 
@@ -60,7 +47,7 @@ export default class extends Controller {
 
     flipcards[0].addEventListener('transitionend', () => {
       picturesgoright[0].classList.add("picture-to-right");
-      picturesgoleft[0].classList.add("picture-to-left");
+      picturesgomoreright[0].classList.add("picture-to-more-right");
       picturesgodown[0].classList.add("picture-to-down");
     });
   }
@@ -69,24 +56,21 @@ export default class extends Controller {
     const flipcards = this.flipcardsTargets;
     const picturesgodown = this.picturesgodownTargets;
 
-    flipcards[0].style.top = "3.1rem";
-
     this.openFlip(1);
 
     flipcards[1].addEventListener('transitionend', () => {
-      picturesgodown[1].classList.add("picture-to-down");
+      picturesgodown[1].classList.add("picture-to-down-svitlana");
     });
   }
 
   show_shooting_three() {
     const flipcards = this.flipcardsTargets;
     const picturesgodown = this.picturesgodownTargets;
-    flipcards[0].style.top = "6.2rem";
-    flipcards[1].style.top = "3.1rem";
+
     this.openFlip(2);
 
     flipcards[2].addEventListener('transitionend', () => {
-      picturesgodown[2].classList.add("picture-to-down");
+      picturesgodown[2].classList.add("picture-to-down-dias");
     });
   }
 
@@ -96,10 +80,6 @@ export default class extends Controller {
     const picturesgoleft = this.picturesgoleftTargets;
     const picturegodowner = this.picturegodownerTarget;
     const picturesgodown = this.picturesgodownTargets;
-
-    flipcards[0].style.top = "9.3rem";
-    flipcards[1].style.top = "6.2rem";
-    flipcards[2].style.top = "3.1rem";
 
     this.openFlip(3);
 
@@ -119,11 +99,6 @@ export default class extends Controller {
     const picturesgodownerright = this.picturesgodownerrightTargets;
     const picturesgodown = this.picturesgodownTargets;
 
-    flipcards[0].style.top = "12.6rem";
-    flipcards[1].style.top = "9.3rem";
-    flipcards[2].style.top = "6.2rem";
-    flipcards[3].style.top = "3.1rem";
-
     this.openFlip(4);
 
     flipcards[4].addEventListener('transitionend', () => {
@@ -139,12 +114,6 @@ export default class extends Controller {
     const flipcards = this.flipcardsTargets;
     const picturesgoright = this.picturesgorightTargets;
 
-    flipcards[0].style.top = "16rem";
-    flipcards[1].style.top = "12.6rem";
-    flipcards[2].style.top = "9.3rem";
-    flipcards[3].style.top = "6.2rem";
-    flipcards[4].style.top = "3.1rem";
-
     this.openFlip(5);
 
     flipcards[5].addEventListener('transitionend', () => {
@@ -155,13 +124,6 @@ export default class extends Controller {
   show_shooting_seven() {
     const flipcards = this.flipcardsTargets;
     const picturesgoright = this.picturesgorightTargets;
-
-    flipcards[0].style.top = "19rem";
-    flipcards[1].style.top = "16rem";
-    flipcards[2].style.top = "12.6rem";
-    flipcards[3].style.top = "9.3rem";
-    flipcards[4].style.top = "6.2rem";
-    flipcards[5].style.top = "3.1rem";
 
     this.openFlip(6);
 
@@ -174,14 +136,6 @@ export default class extends Controller {
     const flipcards = this.flipcardsTargets;
     const picturesgoright = this.picturesgorightTargets;
 
-    flipcards[0].style.top = "22rem";
-    flipcards[1].style.top = "19rem";
-    flipcards[2].style.top = "16rem";
-    flipcards[3].style.top = "12.6rem";
-    flipcards[4].style.top = "9.3rem";
-    flipcards[5].style.top = "6.2rem";
-    flipcards[6].style.top = "3.1rem";
-
     this.openFlip(7);
 
     flipcards[7].addEventListener('transitionend', () => {
@@ -193,15 +147,6 @@ export default class extends Controller {
     const flipcards = this.flipcardsTargets;
     const picturesgoright = this.picturesgorightTargets;
     const picturesgoleft = this.picturesgoleftTargets;
-
-    flipcards[0].style.top = "25rem";
-    flipcards[1].style.top = "22rem";
-    flipcards[2].style.top = "19rem";
-    flipcards[3].style.top = "16rem";
-    flipcards[4].style.top = "12.6rem";
-    flipcards[5].style.top = "9.3rem";
-    flipcards[6].style.top = "6.2rem";
-    flipcards[7].style.top = "3.1rem";
 
     this.openFlip(8);
 
@@ -220,16 +165,6 @@ export default class extends Controller {
     const picturesgodown = this.picturesgodownTargets;
     const picturegodownertodowner = this.picturegodownertodownerTarget;
 
-    flipcards[0].style.top = "28rem";
-    flipcards[1].style.top = "25rem";
-    flipcards[2].style.top = "22rem";
-    flipcards[3].style.top = "19rem";
-    flipcards[4].style.top = "16rem";
-    flipcards[5].style.top = "12.6rem";
-    flipcards[6].style.top = "9.3rem";
-    flipcards[7].style.top = "6.2rem";
-    flipcards[8].style.top = "3.1rem";
-
     this.openFlip(9);
 
     flipcards[9].addEventListener('transitionend', () => {
@@ -246,17 +181,6 @@ export default class extends Controller {
     const picturesgoright = this.picturesgorightTargets;
     const picturesgodown = this.picturesgodownTargets;
     const flipcards = this.flipcardsTargets;
-
-    flipcards[0].style.top = "31.5rem";
-    flipcards[1].style.top = "28rem";
-    flipcards[2].style.top = "25rem";
-    flipcards[3].style.top = "22rem";
-    flipcards[4].style.top = "19rem";
-    flipcards[5].style.top = "16rem";
-    flipcards[6].style.top = "12.6rem";
-    flipcards[7].style.top = "9.3rem";
-    flipcards[8].style.top = "6.2rem";
-    flipcards[9].style.top = "3.1rem";
 
     this.openFlip(10);
 

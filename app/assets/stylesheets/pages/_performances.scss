@@ -1,11 +1,6 @@
-.page-performance {
-  overflow: overlay;
-}
-
 .allframe {
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-gap: 26px;
   justify-content: center;
 }
 
@@ -14,6 +9,12 @@
   width: 364.3px;
   position: relative;
   top: 0rem;
+  opacity: 1;
+  transition: opacity 0.9s ease-in-out;
+  -o-transition: opacity 0.9s ease-in-out;
+  -webkit-transition: opacity 0.9s ease-in-out;
+  -ms-transition: opacity 0.9s ease-in-out;
+  background-color: transparent;
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -22,6 +23,10 @@
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
+}
+
+.card .fade {
+  opacity: 0;
 }
 
 .card-container {
@@ -147,11 +152,11 @@
 
 .picture-to-right {
   visibility: unset;
-  transform: translate(30em, 0);
-  -webkit-transform: translate(30em, 0);
-  -moz-transform: translate(30em, 0);
-  -o-transform: translate(30em, 0);
-  -ms-transform: translate(30em, 0);
+  transform: translate(24em, 0);
+  -webkit-transform: translate(24em, 0);
+  -moz-transform: translate(24em, 0);
+  -o-transform: translate(24em, 0);
+  -ms-transform: translate(24em, 0);
 }
 
 .picture-to-left {
@@ -163,13 +168,40 @@
   -ms-transform: translate(-30em, 0);
 }
 
+.picture-to-more-right {
+  visibility: unset;
+  transform: translate(47em, 0);
+  -webkit-transform: translate(47em, 0);
+  -moz-transform: translate(47em, 0);
+  -o-transform: translate(47em, 0);
+  -ms-transform: translate(47em, 0);
+}
+
+.picture-to-down-dias {
+  visibility: unset;
+  transform: translate(-52.5em, 0);
+  -webkit-transform: translate(-52.5em, 0);
+  -moz-transform: translate(-52.5em, 0);
+  -o-transform: translate(-52.5em, 0);
+  -ms-transform: translate(-52.5em, 0);
+}
+
 .picture-to-down {
   visibility: unset;
-  transform: translate(-14.5em, 41em);
-  -webkit-transform: translate(-14.5em, 41em);
-  -moz-transform: translate(-14.5em, 41em);
-  -o-transform: translate(-14.5em, 41em);
-  -ms-transform: translate(-14.5em, 41em);
+  transform: translate(8.5em, 40em);
+  -webkit-transform: translate(8.5em, 40em);
+  -moz-transform: translate(8.5em, 40em);
+  -o-transform: translate(8.5em, 40em);
+  -ms-transform: translate(8.5em, 40em);
+}
+
+.picture-to-down-svitlana {
+  visibility: unset;
+  transform: translate(-13.5em, 40em);
+  -webkit-transform: translate(-13.5em, 40em);
+  -moz-transform: translate(-13.5em, 40em);
+  -o-transform: translate(-13.5em, 40em);
+  -ms-transform: translate(-13.5em, 40em);
 }
 
 .picture-big-to-downer {
@@ -217,6 +249,7 @@
   -o-transform: translate(-27em, 0);
   -ms-transform: translate(-27em, 0);
 }
+
 .back-but {
   visibility: hidden;
   bottom: -3.6rem;
@@ -315,4 +348,13 @@
   background-image: url(Super-Lily-1.jpg);
   background-repeat: no-repeat;
   background-size: 361.3px 553px;
+}
+
+.front-but {
+  position: relative;
+  bottom: -396px;
+}
+
+.but_four {
+  bottom: -372px;
 }
