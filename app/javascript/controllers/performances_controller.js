@@ -9,18 +9,39 @@ export default class extends Controller {
     const frameshootings = this.frameshootingsTargets;
 
     const cards = flipcards.filter(flipcard => flipcard !== flipcards[shootingNumber]);
-    const buttonsfade = buttons.filter(button => button !== buttons[shootingNumber]);
-
-    buttonsfade.forEach(button => button.classList.toggle("fade"));
-    cards.forEach(card => card.classList.toggle("fade"));
-
-    flipcards[shootingNumber].classList.toggle("flip");
 
     setTimeout(() => {
-      frameshootings.forEach(frame => frame.style.height = "780px");
-    }, 1700);
-  }
+      buttons.forEach(button => button.classList.toggle("fade"));
+    }, 300);
 
+      if(buttons[shootingNumber].style.bottom !== "-28px"){
+        setTimeout(() => {
+          buttons[shootingNumber].classList.toggle("fade");
+          buttons[shootingNumber].style.bottom = "-28px";
+          buttons[shootingNumber].innerHTML = "fermer";
+        }, 700);
+      } else {
+        setTimeout(() => {
+          buttons[shootingNumber].style.bottom = "55px";
+          buttons[shootingNumber].innerHTML = "ouvrir";
+          buttons[shootingNumber].classList.toggle("fade");
+        }, 500);
+      }
+
+      flipcards[shootingNumber].classList.toggle("flip");
+
+      if (frameshootings[shootingNumber].style.height == "555px") {
+        cards.forEach(card => card.classList.toggle("fade"));
+        setTimeout(() => {
+          frameshootings[shootingNumber].style.height = "780px";
+        }, 800);
+      } else {
+        setTimeout(() => {
+          cards.forEach(card => card.classList.toggle("fade"));
+          frameshootings[shootingNumber].style.height = "555px";
+        }, 200);
+      }
+  }
 
   show_shooting_one() {
     const picturesgoright = this.picturesgorightTargets;

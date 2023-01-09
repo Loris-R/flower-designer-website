@@ -1,5 +1,5 @@
 .page-performance {
-  overflow: overlay;
+  overflow-x: hidden;
 }
 
 .allframe {
@@ -14,6 +14,7 @@
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -o-perspective: 1000;
+  height: 555px;
 }
 
 .card {
@@ -44,6 +45,10 @@
 
 button .fade {
   opacity: 0;
+}
+
+.opacity {
+  opacity: 1;
 }
 
 .front, .back {
@@ -107,7 +112,7 @@ button .fade {
 .scaled-button {
   -webkit-animation: button 1600ms linear infinite alternate;
   animation: button 1600ms linear infinite alternate;
-  position: absolute;
+  position: relative;
   cursor: pointer;
   border: none;
   bottom: 4rem;
@@ -298,9 +303,8 @@ button .fade {
 
 .front-but {
   backface-visibility: unset;
-  position: relative;
-  bottom: 71px;
-  left: 143px;
+  bottom: 55px;
+  left: 164px;
 }
 
 .title-performance {
