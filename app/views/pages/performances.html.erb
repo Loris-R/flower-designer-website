@@ -1,8 +1,8 @@
 <div class="page-performance">
   <h1 class="title-performance white"> Performances </h1>
   <p class="text-performance white"> C'est sur l'île de la Réunion, en avril 2019 que je réalise mon premier shooting d'art floral. Poussée par mon ami Ghjuliu Mattei, photographe, nous réalisons ensemble, notre première collaboration. Je voulais mettre en scène une femme plongée dans cette faune incroyable pour mettre mes créations en avant. Ma satisfaction fut tellement forte que je décide alors de réitérer l'expérience sur des thèmes tous aussi différents les uns que les autres. Pour moi, c'est le moyen le plus fort d'expression en art floral. J'aime créer ces ambiances, réfléchir au moindre détail, mélanger les textures et les couleurs de façon à obtenir un tableau parfait </p>
-  <div class="allframe" data-controller="performances" data-performances-target="alltotalframe">
-    <div class="frame-shooting" data-performances-target="frames">
+  <div class="allframe" data-controller="performances">
+    <div data-performances-target="frameshootings">
       <div class="card-container">
         <div class="card card-one" data-performances-target="flipcards">
           <div class="front front-one">
@@ -16,13 +16,13 @@
               <%= image_tag "Sauvage-3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
               <%= image_tag "Sauvage-4.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgomoreright" } %>
               <%= image_tag "Sauvage 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_one" data-performances-target="buttons"> fermer </button>
             </div>
+            <button class= "scaled-button back-but visibility" data-action="click->performances#close_one" data-performances-target="buttons"> fermer </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div data-performances-target="frameshootings">
       <div class="card-container">
         <div class="card card-three" data-performances-target="flipcards">
           <div class="front front-three">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div data-performances-target="frameshootings">
       <div class="card-container">
         <div class="card card-two" data-performances-target="flipcards">
           <div class="front front-two">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-five" data-performances-target="flipcards">
           <div class="front front-five">
@@ -69,7 +69,7 @@
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Shoot-Floral-1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Shoot Floral 2.jpg", class: "performance-pic visibility", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" }  %>
+              <%= image_tag "Shoot Floral 2.jpg", class: "performance-pic visibility", class: "performance-pic visibility", data: { performances_target: "picturesgomoreright" }  %>
               <%= image_tag "Shoot Floral 4.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
               <%= image_tag "Shoot Floral 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
               <%= image_tag "Shoot Floral 5.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerleft" } %>
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-four" data-performances-target="flipcards">
           <div class="front front-four">
@@ -101,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-six" data-performances-target="flipcards">
           <div class="front front-six">
@@ -112,14 +112,14 @@
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Amazone-1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Amazone 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <%= image_tag "Amazone 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
               <button class= "scaled-button back-but" data-action="click->performances#close_six" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-eight" data-performances-target="flipcards">
           <div class="front front-eight">
@@ -137,7 +137,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-seven" data-performances-target="flipcards">
           <div class="front front-seven">
@@ -155,7 +155,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-nine" data-performances-target="flipcards">
           <div class="front front-nine">
@@ -166,7 +166,7 @@
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Aurus-1.jpg", class: "performance-pic seen-one" %>
-              <%= image_tag "Aurus 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
+              <%= image_tag "Aurus 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturegolefter" } %>
               <%= image_tag "Aurus 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
               <button class= "scaled-button back-but" data-action="click->performances#close_nine" data-performances-target="buttons"> fermer </button>
             </div>
@@ -174,7 +174,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-ten" data-performances-target="flipcards">
           <div class="front front-ten">
@@ -186,10 +186,10 @@
             <div class="pic-cont">
               <%= image_tag "Bijoux-du-monde-4.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "Bijoux du monde 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
-              <%= image_tag "Bijoux du monde 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
+              <%= image_tag "Bijoux du monde 1.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgomoreright" } %>
               <%= image_tag "Bijoux du monde 7.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
               <%= image_tag "Bijoux du monde 5.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerleft" }%>
-              <%= image_tag "Bijoux du monde 1.jpg", class: "performance-pic visibility", data: { performances_target:
+              <%= image_tag "Bijoux du monde 3.jpg", class: "performance-pic visibility", data: { performances_target:
               "picturesgodownerright" } %>
               <%= image_tag "Bijoux du monde 6.jpg", class: "performance-pic visibility", data: { performances_target:
               "picturegodownertodowner" } %>
@@ -199,7 +199,7 @@
         </div>
       </div>
     </div>
-    <div class="frame-shooting" data-performances-target="frames">
+    <div class="frame-shooting">
       <div class="card-container">
         <div class="card card-eleven" data-performances-target="flipcards">
           <div class="front front-eleven">

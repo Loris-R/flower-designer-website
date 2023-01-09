@@ -1,31 +1,18 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["flipcards", "picturesgoright", "picturesgomoreright", "picturesgodown", "buttons", "frames", "picturegodowner", "picturesgodownerleft", "picturesgodownerright", "picturegodownertodowner"]
+  static targets = ["flipcards", "picturesgoright", "picturesgomoreright", "picturesgodown", "buttons", "picturegodowner", "picturesgodownerleft", "picturesgodownerright", "picturegodownertodowner", "picturesgoleft", "picturegolefter", "frameshootings"]
 
-  flipBack(shootingNumber, cardsNumber) {
+  flipBack(shootingNumber) {
     const flipcards = this.flipcardsTargets;
-    const frames = this.framesTargets;
-
+    console.log("ok");
     flipcards[shootingNumber].classList.remove("flip");
-    setTimeout(() => {
-      frames.forEach(frame =>
-        frame.classList.remove("card-menu-down")
-      );
-    }, 1000);
-
-    if(shootingNumber !== 0) {
-      setTimeout(() => {
-        cardsNumber.forEach(number =>
-        flipcards[number].style.top = "0rem"
-        )
-      }, 1000);
-    }
   }
 
   openFlip(shootingNumber) {
     const buttons = this.buttonsTargets;
     const flipcards = this.flipcardsTargets;
+    const frameshootings = this.frameshootingsTargets;
 
     const cards = flipcards.filter(flipcard => flipcard !== flipcards[shootingNumber]);
 
@@ -33,7 +20,10 @@ export default class extends Controller {
 
     flipcards[shootingNumber].classList.add("flip");
 
-    buttons[shootingNumber].style.visibility = "visible";
+    setTimeout(() => {
+      buttons[shootingNumber].classList.remove("visibility");
+      frameshootings.forEach(frame => frame.style.height = "780px");
+    }, 1700);
   }
 
 
@@ -47,7 +37,7 @@ export default class extends Controller {
 
     flipcards[0].addEventListener('transitionend', () => {
       picturesgoright[0].classList.add("picture-to-right");
-      picturesgomoreright[0].classList.add("picture-to-more-right");
+      picturesgomoreright[0].classList.add("picture-to-more-right-sauvage");
       picturesgodown[0].classList.add("picture-to-down");
     });
   }
@@ -77,17 +67,19 @@ export default class extends Controller {
   show_shooting_four() {
     const flipcards = this.flipcardsTargets;
     const picturesgoright = this.picturesgorightTargets;
-    const picturesgoleft = this.picturesgoleftTargets;
-    const picturegodowner = this.picturegodownerTarget;
+    const picturesgomoreright = this.picturesgomorerightTargets;
     const picturesgodown = this.picturesgodownTargets;
+    const picturesgodownerleft = this.picturesgodownerleftTargets;
+    const picturesgodownerright = this.picturesgodownerrightTargets;
 
     this.openFlip(3);
 
     flipcards[3].addEventListener('transitionend', () => {
       picturesgoright[1].classList.add("picture-to-right");
-      picturesgoleft[1].classList.add("picture-to-left");
+      picturesgomoreright[1].classList.add("picture-to-more-right");
       picturesgodown[3].classList.add("picture-to-down");
-      picturegodowner.classList.add("picture-big-to-downer");
+      picturesgodownerleft[0].classList.add("picture-to-down-left");
+      picturesgodownerright[0].classList.add("picture-to-down-right");
     });
   }
 
@@ -95,29 +87,27 @@ export default class extends Controller {
     const flipcards = this.flipcardsTargets;
     const picturesgoright = this.picturesgorightTargets;
     const picturesgoleft = this.picturesgoleftTargets;
-    const picturesgodownerleft = this.picturesgodownerleftTargets;
-    const picturesgodownerright = this.picturesgodownerrightTargets;
     const picturesgodown = this.picturesgodownTargets;
+    const picturegodowner = this.picturegodownerTarget;
 
     this.openFlip(4);
 
     flipcards[4].addEventListener('transitionend', () => {
       picturesgoright[2].classList.add("picture-to-right");
-      picturesgoleft[2].classList.add("picture-to-left");
-      picturesgodown[4].classList.add("picture-to-down");
-      picturesgodownerleft[0].classList.add("picture-to-down-left");
-      picturesgodownerright[0].classList.add("picture-to-down-right");
+      picturesgoleft[0].classList.add("picture-to-left");
+      picturesgodown[4].classList.add("picture-to-down-svitlana");
+      picturegodowner.classList.add("picture-big-to-downer");
     });
   }
 
   show_shooting_six() {
     const flipcards = this.flipcardsTargets;
-    const picturesgoright = this.picturesgorightTargets;
+    const picturesgoleft = this.picturesgoleftTargets;
 
     this.openFlip(5);
 
     flipcards[5].addEventListener('transitionend', () => {
-      picturesgoright[3].classList.add("picture-to-right");
+      picturesgoleft[1].classList.add("picture-to-left");
     });
   }
 
@@ -128,7 +118,7 @@ export default class extends Controller {
     this.openFlip(6);
 
     flipcards[6].addEventListener('transitionend', () => {
-      picturesgoright[4].classList.add("picture-to-right");
+      picturesgoright[3].classList.add("picture-to-right");
     });
   }
 
@@ -139,27 +129,27 @@ export default class extends Controller {
     this.openFlip(7);
 
     flipcards[7].addEventListener('transitionend', () => {
-      picturesgoright[5].classList.add("picture-to-right");
+      picturesgoright[4].classList.add("picture-to-right");
     });
   }
 
   show_shooting_nine() {
     const flipcards = this.flipcardsTargets;
-    const picturesgoright = this.picturesgorightTargets;
     const picturesgoleft = this.picturesgoleftTargets;
+    const picturegolefter = this.picturegolefterTarget;
 
     this.openFlip(8);
 
     flipcards[8].addEventListener('transitionend', () => {
-      picturesgoright[6].classList.add("picture-to-right");
-      picturesgoleft[3].classList.add("picture-to-left");
+      picturesgoleft[2].classList.add("picture-to-left");
+      picturegolefter.classList.add("picture-to-lefter");
     });
   }
 
   show_shooting_ten() {
     const flipcards = this.flipcardsTargets;
+    const picturesgomoreright = this.picturesgomorerightTargets;
     const picturesgoright = this.picturesgorightTargets;
-    const picturesgoleft = this.picturesgoleftTargets;
     const picturesgodownerleft = this.picturesgodownerleftTargets;
     const picturesgodownerright = this.picturesgodownerrightTargets;
     const picturesgodown = this.picturesgodownTargets;
@@ -168,8 +158,8 @@ export default class extends Controller {
     this.openFlip(9);
 
     flipcards[9].addEventListener('transitionend', () => {
-      picturesgoright[7].classList.add("picture-to-right");
-      picturesgoleft[4].classList.add("picture-to-left");
+      picturesgoright[5].classList.add("picture-to-right");
+      picturesgomoreright[2].classList.add("picture-to-more-right-bijoux");
       picturesgodown[5].classList.add("picture-to-down");
       picturesgodownerleft[1].classList.add("picture-to-down-left");
       picturesgodownerright[1].classList.add("picture-to-down-right");
@@ -185,63 +175,53 @@ export default class extends Controller {
     this.openFlip(10);
 
     flipcards[10].addEventListener('transitionend', () => {
-      picturesgoright[8].classList.add("picture-to-right");
-      picturesgodown[6].classList.add("picture-to-down");
+      picturesgoright[6].classList.add("picture-to-right");
+      picturesgodown[6].classList.add("picture-to-down-svitlana");
     });
   }
 
   close_one() {
+    console.log("close_one");
     this.flipBack(0);
   }
 
   close_two() {
-    const flipcardnumbers = [0];
-    this.flipBack(1, flipcardnumbers);
+    this.flipBack(1);
   }
 
   close_three() {
-    const flipcardnumbers = [0, 1];
-    this.flipBack(2, flipcardnumbers);
+    this.flipBack(2);
   }
 
   close_four() {
-    const flipcardnumbers = [0,1,2];
-    this.flipBack(3, flipcardnumbers);
+    this.flipBack(3);
   }
 
   close_five() {
-    const flipcardnumbers = [0, 1, 2, 3];
-    this.flipBack(4, flipcardnumbers);
+    this.flipBack(4);
   }
 
   close_six() {
-    const flipcardnumbers = [0, 1, 2, 3, 4];
-    this.flipBack(5, flipcardnumbers);
+    this.flipBack(5);
   }
 
   close_seven() {
-    const flipcardnumbers = [0, 1, 2, 3, 4, 5];
-    this.flipBack(6, flipcardnumbers);
+    this.flipBack(6);
   }
 
   close_eight() {
-    const flipcardnumbers = [0, 1, 2, 3, 4, 5, 6];
-    this.flipBack(7, flipcardnumbers);
+    this.flipBack(7);
   }
 
   close_nine() {
-    const flipcardnumbers = [0, 1, 2, 3, 4, 5, 6, 7];
-    this.flipBack(8, flipcardnumbers);
+    this.flipBack(8);
   }
 
   close_ten() {
-    const flipcardnumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-    this.flipBack(9, flipcardnumbers);
+    this.flipBack(9);
   }
 
   close_eleven() {
-    const flipcardnumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    this.flipBack(10, flipcardnumbers);
+    this.flipBack(10);
   }
-
 }

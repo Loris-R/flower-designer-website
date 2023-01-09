@@ -1,7 +1,19 @@
+.page-performance {
+  overflow: overlay;
+}
+
 .allframe {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: center;
+  grid-gap: 10px;
+}
+
+.card-container {
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
 }
 
 .card {
@@ -10,6 +22,7 @@
   position: relative;
   top: 0rem;
   opacity: 1;
+  display: block;
   transition: opacity 0.9s ease-in-out;
   -o-transition: opacity 0.9s ease-in-out;
   -webkit-transition: opacity 0.9s ease-in-out;
@@ -27,16 +40,6 @@
 
 .card .fade {
   opacity: 0;
-}
-
-.card-container {
-  perspective: 1000;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -o-perspective: 1000;
-  position: relative;
-  height: 562px;
-  width: 372.4px;
 }
 
 .front, .back {
@@ -161,14 +164,41 @@
 
 .picture-to-left {
   visibility: unset;
-  transform: translate(-30em, 0);
-  -webkit-transform: translate(-30em, 0);
-  -moz-transform: translate(-30em, 0);
-  -o-transform: translate(-30em, 0);
-  -ms-transform: translate(-30em, 0);
+  transform: translate(-24em, 0);
+  -webkit-transform: translate(-24em, 0);
+  -moz-transform: translate(-24em, 0);
+  -o-transform: translate(-24em, 0);
+  -ms-transform: translate(-24em, 0);
+}
+
+.picture-to-lefter {
+  visibility: unset;
+  transform: translate(-48em, 0);
+  -webkit-transform: translate(-48em, 0);
+  -moz-transform: translate(-48em, 0);
+  -o-transform: translate(-48em, 0);
+  -ms-transform: translate(-48em, 0);
 }
 
 .picture-to-more-right {
+  visibility: unset;
+  transform: translate(48em, 0);
+  -webkit-transform: translate(48em, 0);
+  -moz-transform: translate(48em, 0);
+  -o-transform: translate(48em, 0);
+  -ms-transform: translate(48em, 0);
+}
+
+.picture-to-more-right-bijoux {
+  visibility: unset;
+  transform: translate(49em, 0);
+  -webkit-transform: translate(49em, 0);
+  -moz-transform: translate(49em, 0);
+  -o-transform: translate(49em, 0);
+  -ms-transform: translate(49em, 0);
+}
+
+.picture-to-more-right-sauvage {
   visibility: unset;
   transform: translate(47em, 0);
   -webkit-transform: translate(47em, 0);
@@ -215,29 +245,29 @@
 
 .picture-to-down-left {
   visibility: unset;
-  transform: translate(-14em, 80em);
-  -webkit-transform: translate(-14em, 80em);
-  -moz-transform: translate(-14em, 80em);
-  -o-transform: translate(-14em, 80em);
-  -ms-transform: translate(-14em, 80em);
+  transform: translate(11em, 80em);
+  -webkit-transform: translate(11em, 80em);
+  -moz-transform: translate(11em, 80em);
+  -o-transform: translate(11em, 80em);
+  -ms-transform: translate(11em, 80em);
 }
 
 .picture-to-down-right {
   visibility: unset;
-  transform: translate(14em, 80em);
-  -webkit-transform: translate(14em, 80em);
-  -moz-transform: translate(14em, 80em);
-  -o-transform: translate(14em, 80em);
-  -ms-transform: translate(14em, 80em);
+  transform: translate(35em, 80em);
+  -webkit-transform: translate(35em, 80em);
+  -moz-transform: translate(35em, 80em);
+  -o-transform: translate(35em, 80em);
+  -ms-transform: translate(35em, 80em);
 }
 
 .picture-to-down-downer {
   visibility: unset;
-  transform: translate(-14.5em, 119em);
-  -webkit-transform: translate(-14.5em, 119em);
-  -moz-transform: translate(-14.5em, 119em);
-  -o-transform: translate(-14.5em, 119em);
-  -ms-transform: translate(-14.5em, 119em);
+  transform: translate(8.5em, 119em);
+  -webkit-transform: translate(8.5em, 119em);
+  -moz-transform: translate(8.5em, 119em);
+  -o-transform: translate(8.5em, 119em);
+  -ms-transform: translate(8.5em, 119em);
 }
 
 
@@ -251,9 +281,12 @@
 }
 
 .back-but {
-  visibility: hidden;
   bottom: -3.6rem;
   left: 43%;
+}
+
+.opacity {
+  opacity: 1;
 }
 
 .card-menu-down {
