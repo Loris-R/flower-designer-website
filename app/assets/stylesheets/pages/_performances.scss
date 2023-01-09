@@ -1,5 +1,20 @@
 .page-performance {
-  overflow: overlay;
+  overflow-x: hidden;
+}
+
+.allframe {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+.card-container {
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  height: 555px;
 }
 
 .card {
@@ -7,6 +22,13 @@
   width: 364.3px;
   position: relative;
   top: 0rem;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.9s ease-in-out;
+  -o-transition: opacity 0.9s ease-in-out;
+  -webkit-transition: opacity 0.9s ease-in-out;
+  -ms-transition: opacity 0.9s ease-in-out;
+  background-color: transparent;
   -o-transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -17,20 +39,16 @@
   transform-style: preserve-3d;
 }
 
-.card-container {
-  perspective: 1000;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -o-perspective: 1000;
-  position: relative;
-  height: 562px;
-  width: 372.4px;
+.card .fade {
+  opacity: 0;
 }
 
-.frame-shooting {
-  display:grid;
-  justify-content: center;
-  grid-template-rows: 50px;
+button .fade {
+  opacity: 0;
+}
+
+.opacity {
+  opacity: 1;
 }
 
 .front, .back {
@@ -64,7 +82,7 @@
 }
 
 .grey {
-  color: #4B515D;
+  color: black;
 }
 
 .shooting-name {
@@ -75,7 +93,6 @@
 }
 
 .shooting-text {
-  padding: 213px 60px;
   text-align: center;
 }
 
@@ -95,7 +112,7 @@
 .scaled-button {
   -webkit-animation: button 1600ms linear infinite alternate;
   animation: button 1600ms linear infinite alternate;
-  position: absolute;
+  position: relative;
   cursor: pointer;
   border: none;
   bottom: 4rem;
@@ -147,29 +164,83 @@
 
 .picture-to-right {
   visibility: unset;
-  transform: translate(30em, 0);
-  -webkit-transform: translate(30em, 0);
-  -moz-transform: translate(30em, 0);
-  -o-transform: translate(30em, 0);
-  -ms-transform: translate(30em, 0);
+  transform: translate(24em, 0);
+  -webkit-transform: translate(24em, 0);
+  -moz-transform: translate(24em, 0);
+  -o-transform: translate(24em, 0);
+  -ms-transform: translate(24em, 0);
 }
 
 .picture-to-left {
   visibility: unset;
-  transform: translate(-30em, 0);
-  -webkit-transform: translate(-30em, 0);
-  -moz-transform: translate(-30em, 0);
-  -o-transform: translate(-30em, 0);
-  -ms-transform: translate(-30em, 0);
+  transform: translate(-24em, 0);
+  -webkit-transform: translate(-24em, 0);
+  -moz-transform: translate(-24em, 0);
+  -o-transform: translate(-24em, 0);
+  -ms-transform: translate(-24em, 0);
+}
+
+.picture-to-lefter {
+  visibility: unset;
+  transform: translate(-48em, 0);
+  -webkit-transform: translate(-48em, 0);
+  -moz-transform: translate(-48em, 0);
+  -o-transform: translate(-48em, 0);
+  -ms-transform: translate(-48em, 0);
+}
+
+.picture-to-more-right {
+  visibility: unset;
+  transform: translate(48em, 0);
+  -webkit-transform: translate(48em, 0);
+  -moz-transform: translate(48em, 0);
+  -o-transform: translate(48em, 0);
+  -ms-transform: translate(48em, 0);
+}
+
+.picture-to-more-right-bijoux {
+  visibility: unset;
+  transform: translate(49em, 0);
+  -webkit-transform: translate(49em, 0);
+  -moz-transform: translate(49em, 0);
+  -o-transform: translate(49em, 0);
+  -ms-transform: translate(49em, 0);
+}
+
+.picture-to-more-right-sauvage {
+  visibility: unset;
+  transform: translate(47em, 0);
+  -webkit-transform: translate(47em, 0);
+  -moz-transform: translate(47em, 0);
+  -o-transform: translate(47em, 0);
+  -ms-transform: translate(47em, 0);
+}
+
+.picture-to-down-dias {
+  visibility: unset;
+  transform: translate(-52.5em, 0);
+  -webkit-transform: translate(-52.5em, 0);
+  -moz-transform: translate(-52.5em, 0);
+  -o-transform: translate(-52.5em, 0);
+  -ms-transform: translate(-52.5em, 0);
 }
 
 .picture-to-down {
   visibility: unset;
-  transform: translate(-14.5em, 41em);
-  -webkit-transform: translate(-14.5em, 41em);
-  -moz-transform: translate(-14.5em, 41em);
-  -o-transform: translate(-14.5em, 41em);
-  -ms-transform: translate(-14.5em, 41em);
+  transform: translate(8.5em, 40em);
+  -webkit-transform: translate(8.5em, 40em);
+  -moz-transform: translate(8.5em, 40em);
+  -o-transform: translate(8.5em, 40em);
+  -ms-transform: translate(8.5em, 40em);
+}
+
+.picture-to-down-svitlana {
+  visibility: unset;
+  transform: translate(-13.5em, 40em);
+  -webkit-transform: translate(-13.5em, 40em);
+  -moz-transform: translate(-13.5em, 40em);
+  -o-transform: translate(-13.5em, 40em);
+  -ms-transform: translate(-13.5em, 40em);
 }
 
 .picture-big-to-downer {
@@ -183,29 +254,29 @@
 
 .picture-to-down-left {
   visibility: unset;
-  transform: translate(-14em, 80em);
-  -webkit-transform: translate(-14em, 80em);
-  -moz-transform: translate(-14em, 80em);
-  -o-transform: translate(-14em, 80em);
-  -ms-transform: translate(-14em, 80em);
+  transform: translate(11em, 80em);
+  -webkit-transform: translate(11em, 80em);
+  -moz-transform: translate(11em, 80em);
+  -o-transform: translate(11em, 80em);
+  -ms-transform: translate(11em, 80em);
 }
 
 .picture-to-down-right {
   visibility: unset;
-  transform: translate(14em, 80em);
-  -webkit-transform: translate(14em, 80em);
-  -moz-transform: translate(14em, 80em);
-  -o-transform: translate(14em, 80em);
-  -ms-transform: translate(14em, 80em);
+  transform: translate(35em, 80em);
+  -webkit-transform: translate(35em, 80em);
+  -moz-transform: translate(35em, 80em);
+  -o-transform: translate(35em, 80em);
+  -ms-transform: translate(35em, 80em);
 }
 
 .picture-to-down-downer {
   visibility: unset;
-  transform: translate(-14.5em, 119em);
-  -webkit-transform: translate(-14.5em, 119em);
-  -moz-transform: translate(-14.5em, 119em);
-  -o-transform: translate(-14.5em, 119em);
-  -ms-transform: translate(-14.5em, 119em);
+  transform: translate(8.5em, 119em);
+  -webkit-transform: translate(8.5em, 119em);
+  -moz-transform: translate(8.5em, 119em);
+  -o-transform: translate(8.5em, 119em);
+  -ms-transform: translate(8.5em, 119em);
 }
 
 
@@ -217,10 +288,9 @@
   -o-transform: translate(-27em, 0);
   -ms-transform: translate(-27em, 0);
 }
-.back-but {
-  visibility: hidden;
-  bottom: -3.6rem;
-  left: 43%;
+
+.opacity {
+  opacity: 1;
 }
 
 .card-menu-down {
@@ -233,7 +303,8 @@
 
 .front-but {
   backface-visibility: unset;
-  -moz-backface-visibility: unset;
+  bottom: 55px;
+  left: 164px;
 }
 
 .title-performance {
@@ -245,4 +316,74 @@
 .text-performance {
   padding: 5em;
   text-align: center;
+}
+
+.card-one {
+  background-image: url(Sauvage-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-two {
+  background-image: url(Dia-de-los-muertos-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-three {
+  background-image: url(Couronne-Slave-2.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.svitlana-text {
+  padding: 0 1em;
+}
+
+.card-four {
+  background-image: url(La-mariée-de-Kyoto-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-five {
+  background-image: url(Shoot-Floral-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-six {
+  background-image: url(Amazone-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-seven {
+  background-image: url(Didi-Disco-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-eight {
+  background-image: url(La-fille-de-l-étang-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-nine {
+  background-image: url(Aurus-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-ten {
+  background-image: url(Bijoux-du-monde-4.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
+}
+
+.card-eleven {
+  background-image: url(Super-Lily-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 361.3px 553px;
 }
