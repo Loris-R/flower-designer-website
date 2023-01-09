@@ -1,0 +1,15 @@
+<%= form_with model: @message, id: "contact-form" do |form| %>
+  <%= form.fields_for :contact do |contact_form| %>
+    <%= contact_form.label :first_name, "Prénom *", required: true %>
+    <%= contact_form.text_field :first_name %>
+    <%= contact_form.label :last_name, "Nom *", required: true %>
+    <%= contact_form.text_field :last_name %>
+    <%= contact_form.label :email, "Email *" %>
+    <%= contact_form.text_field :email, required: true %>
+    <%= contact_form.label :phone_number, "Numéro de telephone" %>
+    <%= contact_form.text_field :phone_number %>
+  <% end %>
+  <%= form.label :content, "Votre message *" %>
+  <%= form.text_area :content, required: true %>
+  <%= form.submit "Envoyer" %>
+<% end %>

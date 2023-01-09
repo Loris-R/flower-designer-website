@@ -1,5 +1,6 @@
 class Message < ApplicationRecord
-  belongs_to :user
+  belongs_to :contact
+  accepts_nested_attributes_for :contact
 
-  validates :message, presence: true
+  validates :content, presence: true
 end
