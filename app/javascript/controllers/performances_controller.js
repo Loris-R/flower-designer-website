@@ -3,25 +3,20 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["flipcards", "picturesgoright", "picturesgomoreright", "picturesgodown", "buttons", "picturegodowner", "picturesgodownerleft", "picturesgodownerright", "picturegodownertodowner", "picturesgoleft", "picturegolefter", "frameshootings"]
 
-  flipBack(shootingNumber) {
-    const flipcards = this.flipcardsTargets;
-    console.log("ok");
-    flipcards[shootingNumber].classList.remove("flip");
-  }
-
   openFlip(shootingNumber) {
     const buttons = this.buttonsTargets;
     const flipcards = this.flipcardsTargets;
     const frameshootings = this.frameshootingsTargets;
 
     const cards = flipcards.filter(flipcard => flipcard !== flipcards[shootingNumber]);
+    const buttonsfade = buttons.filter(button => button !== buttons[shootingNumber]);
 
-    cards.forEach(card => card.classList.add("fade"));
+    buttonsfade.forEach(button => button.classList.toggle("fade"));
+    cards.forEach(card => card.classList.toggle("fade"));
 
-    flipcards[shootingNumber].classList.add("flip");
+    flipcards[shootingNumber].classList.toggle("flip");
 
     setTimeout(() => {
-      buttons[shootingNumber].classList.remove("visibility");
       frameshootings.forEach(frame => frame.style.height = "780px");
     }, 1700);
   }
@@ -178,50 +173,5 @@ export default class extends Controller {
       picturesgoright[6].classList.add("picture-to-right");
       picturesgodown[6].classList.add("picture-to-down-svitlana");
     });
-  }
-
-  close_one() {
-    console.log("close_one");
-    this.flipBack(0);
-  }
-
-  close_two() {
-    this.flipBack(1);
-  }
-
-  close_three() {
-    this.flipBack(2);
-  }
-
-  close_four() {
-    this.flipBack(3);
-  }
-
-  close_five() {
-    this.flipBack(4);
-  }
-
-  close_six() {
-    this.flipBack(5);
-  }
-
-  close_seven() {
-    this.flipBack(6);
-  }
-
-  close_eight() {
-    this.flipBack(7);
-  }
-
-  close_nine() {
-    this.flipBack(8);
-  }
-
-  close_ten() {
-    this.flipBack(9);
-  }
-
-  close_eleven() {
-    this.flipBack(10);
   }
 }

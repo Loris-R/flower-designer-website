@@ -8,7 +8,6 @@
           <div class="front front-one">
             <h6 class="white shooting-name"> "Sauvage"</h6>
             <p class="white shooting-text"> Crédit photo: Ghjuliu Mattei </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_one"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
@@ -17,9 +16,9 @@
               <%= image_tag "Sauvage-4.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgomoreright" } %>
               <%= image_tag "Sauvage 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
             </div>
-            <button class= "scaled-button back-but visibility" data-action="click->performances#close_one" data-performances-target="buttons"> fermer </button>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_one" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div data-performances-target="frameshootings">
@@ -28,16 +27,15 @@
           <div class="front front-three">
             <h6 class="grey shooting-name"> "Svitlana" </h6>
             <p class="grey shooting-text svitlana-text">  Crédit photo: Ghjuliu Mattei  </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_two"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Couronne-Slave-2.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "coiffe-ukrainienne.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_three" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_two"  data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div data-performances-target="frameshootings">
@@ -46,16 +44,15 @@
           <div class="front front-two">
             <h6 class="white shooting-name align">"Dia de los muertos" </h6>
             <p class="white shooting-text"> Crédit photo: Ghjuliu Mattei </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_three"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Dia-de-los-muertos-1.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "Dia-de-los-muertos-2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_two" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_three" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -64,7 +61,6 @@
           <div class="front front-five">
             <h6 class="white shooting-name align"> "shooting floral" </h6>
             <p class="white shooting-text"> Crédit photo: MKT photographie. </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_four"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
@@ -74,10 +70,10 @@
               <%= image_tag "Shoot Floral 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
               <%= image_tag "Shoot Floral 5.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerleft" } %>
               <%= image_tag "Shoot-floral-6.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodownerright" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_five" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_four" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -86,7 +82,6 @@
           <div class="front front-four">
             <h6 class="white shooting-name align"> "La mariée de Kyoto" </h6>
             <p class="white shooting-text"> Crédit photo: Capturer l'instant- Johanna. </p>
-            <button class= "scaled-button front-but but_four" data-action="click->performances#show_shooting_five"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
@@ -95,10 +90,11 @@
               <%= image_tag "La mariée de Kyoto 4.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
               <%= image_tag "La mariée de Kyoto 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
               <%= image_tag "La mariée de Kyoto 5.jpg", class: "performance-pic visibility index", data: { performances_target: "picturegodowner" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_four" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but but_four" data-action="click->performances#show_shooting_five"
+        data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -107,16 +103,15 @@
           <div class="front front-six">
             <h6 class="white shooting-name align"> "Amazone" </h6>
             <p class="white shooting-text"> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_six"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Amazone-1.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "Amazone 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_six" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_six" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -125,16 +120,15 @@
           <div class="front front-eight">
             <h6 class="white shooting-name align"> "La fille de l'étang" </h6>
             <p class="white shooting-text"> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_seven"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "La-fille-de-l-étang-1.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "La fille de l'étang 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_eight" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_seven" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -143,16 +137,15 @@
           <div class="front front-seven">
             <h6 class="grey shooting-name align"> "Didi Disco" </h6>
             <p class="grey shooting-text"> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_eight"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Didi-Disco-1.jpg", class: "performance-pic seen-one"%>
               <%= image_tag "Didi Disco 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_seven" data-performances-target="buttons"> fermer  </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_eight" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -161,17 +154,16 @@
           <div class="front front-nine">
             <h6 class="white shooting-name align"> "Aurus"  </h6>
             <p class="white shooting-text"> Crédit photo: Ghjuliu Mattei. </p>
-            <button class= "scaled-button front-but" data-action="click->performances#show_shooting_nine"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Aurus-1.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "Aurus 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturegolefter" } %>
               <%= image_tag "Aurus 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoleft" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_nine" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but" data-action="click->performances#show_shooting_nine" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -180,7 +172,6 @@
           <div class="front front-ten">
             <h6 class="white shooting-name align"> "Bijoux du monde" </h6>
             <p class="white shooting-text"> Crédit photo: Douceur angevine photographe. </p>
-            <button class= "scaled-button front-but but_four" data-action="click->performances#show_shooting_ten"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
@@ -193,10 +184,10 @@
               "picturesgodownerright" } %>
               <%= image_tag "Bijoux du monde 6.jpg", class: "performance-pic visibility", data: { performances_target:
               "picturegodownertodowner" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_ten" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but but_four" data-action="click->performances#show_shooting_ten" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
     <div class="frame-shooting">
@@ -205,17 +196,16 @@
           <div class="front front-eleven">
             <h6 class="white shooting-name align"> "Super Lily" </h6>
             <p class="white shooting-text"> Crédit photo : Douceur Angevine photographie.</p>
-            <button class= "scaled-button front-but but_four" data-action="click->performances#show_shooting_eleven"> ouvrir </button>
           </div>
           <div class="back">
             <div class="pic-cont">
               <%= image_tag "Super-Lily-1.jpg", class: "performance-pic seen-one" %>
               <%= image_tag "Super Lily 3.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgoright" } %>
               <%= image_tag "Super Lily 2.jpg", class: "performance-pic visibility", data: { performances_target: "picturesgodown" } %>
-              <button class= "scaled-button back-but" data-action="click->performances#close_eleven" data-performances-target="buttons"> fermer </button>
             </div>
           </div>
         </div>
+        <button class= "scaled-button front-but but_four" data-action="click->performances#show_shooting_eleven" data-performances-target="buttons"> ouvrir </button>
       </div>
     </div>
   </div>

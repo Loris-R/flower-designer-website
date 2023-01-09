@@ -42,6 +42,10 @@
   opacity: 0;
 }
 
+button .fade {
+  opacity: 0;
+}
+
 .front, .back {
   width: 100%;
   height: 100%;
@@ -280,11 +284,6 @@
   -ms-transform: translate(-27em, 0);
 }
 
-.back-but {
-  bottom: -3.6rem;
-  left: 43%;
-}
-
 .opacity {
   opacity: 1;
 }
@@ -299,7 +298,9 @@
 
 .front-but {
   backface-visibility: unset;
-  -moz-backface-visibility: unset;
+  position: relative;
+  bottom: 71px;
+  left: 143px;
 }
 
 .title-performance {
@@ -381,13 +382,4 @@
   background-image: url(Super-Lily-1.jpg);
   background-repeat: no-repeat;
   background-size: 361.3px 553px;
-}
-
-.front-but {
-  position: relative;
-  bottom: -396px;
-}
-
-.but_four {
-  bottom: -372px;
 }
