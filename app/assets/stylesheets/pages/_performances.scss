@@ -387,3 +387,27 @@ button .fade {
   background-repeat: no-repeat;
   background-size: 361.3px 553px;
 }
+
+.chilren-class {
+  visibility: unset;
+  width: 372px;
+  height: unset;
+  position: relative;
+  margin: 1em 0 1em 0;
+  transform: translateY(620px);
+}
+
+@media only screen and (min-width:279px) and (max-width:1180px) {
+  .title-performance {
+    margin: 91px 0 0 0;
+  }
+
+  .text-performance {
+    padding: 4em 1em 1.5em 1em;
+  }
+
+  .allframe {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: none;
+  }
+}
