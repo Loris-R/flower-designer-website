@@ -1,5 +1,5 @@
 class Quoting < ApplicationRecord
-  belongs_to :user
+  belongs_to :contact
   accepts_nested_attributes_for :contact
 
   validates :address, :zipcode, :city, :event_date, :category, presence: true

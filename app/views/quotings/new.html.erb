@@ -65,7 +65,9 @@
   <%= form.label :city, "Ville *" %>
   <%= form.text_area :city, required: true %>
   <%= form.label :event_date, "Date de l'évènement *" %>
-  <%= form.date :event_date, required: true %>
+  <%= form.date_field :event_date, required: true %>
+  <%= form.label :categories, "Categories souhaitées *" %>
+  <%= form.collection_check_boxes :categories, Quoting::CATEGORIES, required: true %>
   <%= form.submit "Envoyer" %>
 <% end %>
 </div>

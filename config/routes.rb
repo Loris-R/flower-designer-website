@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :contacts, only: %i(create)
 
   get "votre-evenement", to: "quotings#new"
-  resources :quoting, only: :create
+  resources :quotings, only: :create
 
   get "contact", to: "messages#new"
   resources :messages, only: :create
