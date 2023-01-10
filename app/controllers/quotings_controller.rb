@@ -1,6 +1,7 @@
 class QuotingsController < ApplicationController
   def new
     @quoting = Quoting.new
+    @quoting.build_contact
   end
 
   def create
