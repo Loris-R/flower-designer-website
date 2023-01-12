@@ -28,7 +28,7 @@ class QuotingsController < ApplicationController
   private
 
   def quoting_params
-    params.require(:quoting).permit(:address, :zipcode, :city, :event_date, 
+    params.require(:quoting).permit(:address, :zipcode, :city, :event_date, categories: [], 
       contact_attributes: [:first_name, :last_name, :email, :phone_number, :city])
   end
 end
