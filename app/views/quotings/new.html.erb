@@ -67,7 +67,7 @@
   <%= form.label :event_date, "Date de l'évènement *" %>
   <%= form.date_field :event_date, required: true %>
   <%= form.label :categories, "Categories souhaitées *" %>
-  <%= form.collection_check_boxes :categories, Quoting::CATEGORIES, required: true %>
+  <%= form.collection_check_boxes :categories, Quoting::CATEGORIES, :to_s, :to_s, required: true %>
   <%= form.submit "Envoyer" %>
 <% end %>
 </div>
