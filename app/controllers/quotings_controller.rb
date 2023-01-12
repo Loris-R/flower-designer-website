@@ -12,11 +12,8 @@ class QuotingsController < ApplicationController
       contact.city = params[:quoting][:contact_attributes][:city] if params[:quoting][:contact_attributes][:city]
       contact.phone_number = params[:quoting][:contact_attributes][:phone_number] if params[:quoting][:contact_attributes][:phone_number]
     end
-
-      categories = params[:quoting][:categories].delete_at(0)
-      @quoting.contact = contact
-      @quoting.categories = categories
-      raise
+    
+    @quoting.contact = contact
 
     if @quoting.save!
       redirect_to root_path
