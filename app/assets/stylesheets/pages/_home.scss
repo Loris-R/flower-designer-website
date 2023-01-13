@@ -250,11 +250,6 @@ body {
     background-position: 37% 0%;
   }
 
-  .icon {
-    top: 8px;
-    right: 21px;
-  }
-
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
   }
@@ -287,19 +282,6 @@ body {
     width: 100vw;
   }
 
-  .optionshome {
-    flex-direction: column;
-    top: 0;
-    height: 319px;
-    text-align: center;
-    width: 100vw;
-    background-color: #962e50;
-  }
-
-  .open {
-    right: 0;
-  }
-
   .center_menu {
     margin-right: 0;
     margin-bottom: 1rem;
@@ -318,14 +300,6 @@ body {
     margin-right: 19px;
   }
 
-  .background {
-    height: unset;
-  }
-
-  .open-menu-on-pages {
-    right: 0;
-  }
-
   .language_link {
     margin-top: 1rem;
     padding: unset;
@@ -341,5 +315,33 @@ body {
 
   .concept-photo, .photo-parcours {
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width:279px) and (max-width:1420px) {
+  .background {
+    height: unset;
+  }
+
+  .icon {
+    top: 8px;
+    right: 21px;
+  }
+
+  .open-menu-on-pages {
+    right: 0;
+  }
+
+  .optionshome {
+    flex-direction: column;
+    top: 0;
+    height: 319px;
+    text-align: center;
+    width: 100vw;
+    background-color: #962e50;
+  }
+
+  .open {
+    right: 0;
   }
 }

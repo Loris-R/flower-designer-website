@@ -7,7 +7,7 @@ export default class extends Controller {
     const icon = this.iconTarget;
     const optionshome = this.optionshomeTarget;
 
-    if (window.matchMedia("(max-width: 900px)").matches) {
+    if (window.matchMedia("(max-width:1420px)").matches) {
       optionshome.classList.remove("open-menu-on-pages");
     };
 
