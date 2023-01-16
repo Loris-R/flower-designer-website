@@ -15,7 +15,7 @@ export default class extends Controller {
       function fadeOut() {
         tophome.classList.add('visuallyhidden');
       };
-      setTimeout(fadeOut, 1200);
+      setTimeout(fadeOut, 2400);
     };
 
     function showUpDelay(bottomhome) {
@@ -23,7 +23,7 @@ export default class extends Controller {
         bottomhome.classList.add('visuallyshow');
         icon.classList.add('visuallyshow');
       }
-      setTimeout(showUp, 1000);
+      setTimeout(showUp, 1800);
     };
 
     function makeAction(tophome, bottomhome) {

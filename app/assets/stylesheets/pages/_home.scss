@@ -29,9 +29,9 @@ body {
 }
 
 .scaled-logo {
-  width: 30px;
-  height: 30px;
-  animation: scale 1750ms ease-in forwards;
+  width: 35px;
+  height: 35px;
+  animation: scale 2750ms ease-in forwards;
 }
 
 #scale-logo {
@@ -40,8 +40,8 @@ body {
 }
 
 .fixed-logo {
-  width: 180px;
-  height: 180px;
+  width: 230px;
+  height: 230px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,17 +50,16 @@ body {
 
 @keyframes scale {
   to {
-    transform: scale(6.0);
+    transform: scale(7.0);
   }
 }
 
 .home-page {
   width: 98.8vw;
   height: 100vh;
-  background-image: url("background-home.jpg");
+  background-image: url("background-home.png");
   background-repeat: no-repeat;
-  position: relative;
-  top: 0;
+  background-size: cover;
 }
 
 .visuallyhidden {
