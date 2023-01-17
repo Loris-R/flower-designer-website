@@ -7,7 +7,7 @@ export default class extends Controller {
     const icon = this.iconTarget;
     const optionshome = this.optionshomeTarget;
 
-    if (window.matchMedia("(max-width: 900px)").matches) {
+    if (window.matchMedia("(max-width:1420px)").matches) {
       optionshome.classList.remove("open-menu-on-pages");
     };
 
@@ -15,7 +15,7 @@ export default class extends Controller {
       function fadeOut() {
         tophome.classList.add('visuallyhidden');
       };
-      setTimeout(fadeOut, 1200);
+      setTimeout(fadeOut, 2400);
     };
 
     function showUpDelay(bottomhome) {
@@ -23,7 +23,7 @@ export default class extends Controller {
         bottomhome.classList.add('visuallyshow');
         icon.classList.add('visuallyshow');
       }
-      setTimeout(showUp, 1000);
+      setTimeout(showUp, 1800);
     };
 
     function makeAction(tophome, bottomhome) {

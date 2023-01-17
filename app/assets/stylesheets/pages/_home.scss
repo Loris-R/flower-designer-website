@@ -29,9 +29,9 @@ body {
 }
 
 .scaled-logo {
-  width: 30px;
-  height: 30px;
-  animation: scale 1750ms ease-in forwards;
+  width: 35px;
+  height: 35px;
+  animation: scale 2750ms ease-in forwards;
 }
 
 #scale-logo {
@@ -40,8 +40,8 @@ body {
 }
 
 .fixed-logo {
-  width: 180px;
-  height: 180px;
+  width: 230px;
+  height: 230px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,17 +50,16 @@ body {
 
 @keyframes scale {
   to {
-    transform: scale(6.0);
+    transform: scale(7.0);
   }
 }
 
 .home-page {
   width: 98.8vw;
   height: 100vh;
-  background-image: url("background-home.jpg");
+  background-image: url("background-home.png");
   background-repeat: no-repeat;
-  position: relative;
-  top: 0;
+  background-size: cover;
 }
 
 .visuallyhidden {
@@ -250,11 +249,6 @@ body {
     background-position: 37% 0%;
   }
 
-  .icon {
-    top: 8px;
-    right: 21px;
-  }
-
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
   }
@@ -287,19 +281,6 @@ body {
     width: 100vw;
   }
 
-  .optionshome {
-    flex-direction: column;
-    top: 0;
-    height: 319px;
-    text-align: center;
-    width: 100vw;
-    background-color: #962e50;
-  }
-
-  .open {
-    right: 0;
-  }
-
   .center_menu {
     margin-right: 0;
     margin-bottom: 1rem;
@@ -318,14 +299,6 @@ body {
     margin-right: 19px;
   }
 
-  .background {
-    height: unset;
-  }
-
-  .open-menu-on-pages {
-    right: 0;
-  }
-
   .language_link {
     margin-top: 1rem;
     padding: unset;
@@ -341,5 +314,33 @@ body {
 
   .concept-photo, .photo-parcours {
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width:279px) and (max-width:1420px) {
+  .background {
+    height: unset;
+  }
+
+  .icon {
+    top: 8px;
+    right: 21px;
+  }
+
+  .open-menu-on-pages {
+    right: 0;
+  }
+
+  .optionshome {
+    flex-direction: column;
+    top: 0;
+    height: 319px;
+    text-align: center;
+    width: 100vw;
+    background-color: #962e50;
+  }
+
+  .open {
+    right: 0;
   }
 }
