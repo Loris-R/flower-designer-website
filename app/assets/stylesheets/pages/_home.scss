@@ -202,22 +202,23 @@ body {
   width: 400px;
 }
 
-.parcours-photo {
-  background-image: url("coiffe-ukrainienne.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 918px;
-  width: 400px;
-  height: 600px;
-}
-
 .concept-part, .parcours-part, .photo-parcours {
   display: flex;
   justify-content: center;
 }
 
-.photo-parcours {
+.parcours-part {
+  flex-direction: column;
   align-items: center;
+}
+
+.parcours-photo, .p-parcours {
+  height: auto;
+  width: 50vw;
+}
+
+.parcours-photo {
+ margin-bottom: 71px;
 }
 
 .concept-title, .parcours-title {
@@ -226,19 +227,26 @@ body {
   margin: 0;
 }
 
-.p-concept, .p-parcours {
+.p-concept {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.p-parcours,
+.p-concept {
+  text-align: center;
+}
+
+.home-text {
+  margin-bottom: 15px;
 }
 
 .p-concept {
   margin-left: 71px;
-}
-
-.p-parcours {
-  margin-right: 71px;
 }
 
 @media only screen and (min-width:279px) and (max-width:900px) {
@@ -257,24 +265,13 @@ body {
     flex-direction: column;
   }
 
-  .parcours-part {
-    flex-direction: column-reverse;
-  }
-
   .parcours-part, .concept-part {
     align-items: center;
   }
 
   .p-concept, .p-parcours {
-    margin-right: unset;
-    margin-left: unset;
     width: 80vw;
-    text-align: center;
-    margin: 4rem 0;
-  }
-
-  .footer {
-    margin-top: 0;
+    margin: 4rem 0 0 0;
   }
 
   #scale-logo {
@@ -306,6 +303,16 @@ body {
 
   .p-footer {
     font-size: small;
+  }
+
+  .home-page {
+    background-image: url("background-home-tel.jpg");
+  }
+
+  .parcours-photo {
+    height: auto;
+    width: 400px;
+    margin-bottom: unset;
   }
 
 }
