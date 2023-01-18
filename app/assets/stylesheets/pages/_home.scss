@@ -29,9 +29,9 @@ body {
 }
 
 .scaled-logo {
-  width: 30px;
-  height: 30px;
-  animation: scale 1750ms ease-in forwards;
+  width: 35px;
+  height: 35px;
+  animation: scale 2750ms ease-in forwards;
 }
 
 #scale-logo {
@@ -40,8 +40,8 @@ body {
 }
 
 .fixed-logo {
-  width: 180px;
-  height: 180px;
+  width: 230px;
+  height: 230px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -50,17 +50,16 @@ body {
 
 @keyframes scale {
   to {
-    transform: scale(6.0);
+    transform: scale(7.0);
   }
 }
 
 .home-page {
   width: 98.8vw;
   height: 100vh;
-  background-image: url("background-home.jpg");
+  background-image: url("background-home.png");
   background-repeat: no-repeat;
-  position: relative;
-  top: 0;
+  background-size: cover;
 }
 
 .visuallyhidden {
@@ -203,22 +202,23 @@ body {
   width: 400px;
 }
 
-.parcours-photo {
-  background-image: url("coiffe-ukrainienne.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 918px;
-  width: 400px;
-  height: 600px;
-}
-
 .concept-part, .parcours-part, .photo-parcours {
   display: flex;
   justify-content: center;
 }
 
-.photo-parcours {
+.parcours-part {
+  flex-direction: column;
   align-items: center;
+}
+
+.parcours-photo, .p-parcours {
+  height: auto;
+  width: 50vw;
+}
+
+.parcours-photo {
+ margin-bottom: 71px;
 }
 
 .concept-title, .parcours-title {
@@ -227,19 +227,26 @@ body {
   margin: 0;
 }
 
-.p-concept, .p-parcours {
+.p-concept {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.p-parcours,
+.p-concept {
+  text-align: center;
+}
+
+.home-text {
+  margin-bottom: 15px;
 }
 
 .p-concept {
   margin-left: 71px;
-}
-
-.p-parcours {
-  margin-right: 71px;
 }
 
 @media only screen and (min-width:279px) and (max-width:900px) {
@@ -250,11 +257,6 @@ body {
     background-position: 37% 0%;
   }
 
-  .icon {
-    top: 8px;
-    right: 21px;
-  }
-
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
   }
@@ -263,41 +265,17 @@ body {
     flex-direction: column;
   }
 
-  .parcours-part {
-    flex-direction: column-reverse;
-  }
-
   .parcours-part, .concept-part {
     align-items: center;
   }
 
   .p-concept, .p-parcours {
-    margin-right: unset;
-    margin-left: unset;
     width: 80vw;
-    text-align: center;
-    margin: 4rem 0;
-  }
-
-  .footer {
-    margin-top: 0;
+    margin: 4rem 0 0 0;
   }
 
   #scale-logo {
     width: 100vw;
-  }
-
-  .optionshome {
-    flex-direction: column;
-    top: 0;
-    height: 319px;
-    text-align: center;
-    width: 100vw;
-    background-color: #962e50;
-  }
-
-  .open {
-    right: 0;
   }
 
   .center_menu {
@@ -318,14 +296,6 @@ body {
     margin-right: 19px;
   }
 
-  .background {
-    height: unset;
-  }
-
-  .open-menu-on-pages {
-    right: 0;
-  }
-
   .language_link {
     margin-top: 1rem;
     padding: unset;
@@ -335,11 +305,49 @@ body {
     font-size: small;
   }
 
+  .home-page {
+    background-image: url("background-home-tel.jpg");
+  }
+
+  .parcours-photo {
+    height: auto;
+    width: 400px;
+    margin-bottom: unset;
+  }
+
 }
 
 @media only screen and (min-width:279px) and (max-width:405px) {
 
   .concept-photo, .photo-parcours {
     width: 100vw;
+  }
+}
+
+@media only screen and (min-width:279px) and (max-width:1420px) {
+  .background {
+    height: unset;
+  }
+
+  .icon {
+    top: 8px;
+    right: 21px;
+  }
+
+  .open-menu-on-pages {
+    right: 0;
+  }
+
+  .optionshome {
+    flex-direction: column;
+    top: 0;
+    height: 319px;
+    text-align: center;
+    width: 100vw;
+    background-color: #962e50;
+  }
+
+  .open {
+    right: 0;
   }
 }
