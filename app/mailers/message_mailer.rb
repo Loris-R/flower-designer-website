@@ -8,6 +8,6 @@ class MessageMailer < ApplicationMailer
   def incoming
     @message = params[:message]
     @contact = @message.contact
-    mail(to: "alicia-bussereau.com", subject: "Nouveau message - formulaire de contact")
+    mail(to: "contact@alicia-bussereau.com", subject: "Nouveau message - formulaire de contact")
   end
 end
