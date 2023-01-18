@@ -10,5 +10,6 @@ class Message < ApplicationRecord
 
   def send_incoming_mail
     MessageMailer.with(message: self).incoming.deliver_now
+    MessageMailer.with(message: self).thanks.deliver_now
   end
 end
