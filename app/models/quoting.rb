@@ -12,5 +12,6 @@ class Quoting < ApplicationRecord
 
   def send_incoming_quoting
     QuotingMailer.with(quoting: self).incoming.deliver_now
+    QuotingMailer.with(quoting: self).thanks.deliver_now
   end
 end
