@@ -1,4 +1,4 @@
-#quoting-form {
+#quoting-form, #contact-form {
   display: flex;
   flex-direction: column;
   width: 45vw;
@@ -64,4 +64,10 @@ input[type=checkbox]:checked {
 
 .cats {
   margin-top: 27px;
+}
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+  #quoting-form, #contact-form {
+    width: 88vw;
+  }
 }
