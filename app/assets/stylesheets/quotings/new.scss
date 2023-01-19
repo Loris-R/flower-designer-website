@@ -1,8 +1,14 @@
-#quoting-form {
+.quoting-form {
   display: flex;
   flex-direction: column;
+  width: 45vw;
 }
 
 .event-check-boxes {
   display: flex;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
 }
