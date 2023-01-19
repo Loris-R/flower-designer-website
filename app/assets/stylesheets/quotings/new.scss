@@ -1,14 +1,66 @@
-.quoting-form {
+#quoting-form {
   display: flex;
   flex-direction: column;
   width: 45vw;
+  border: 5px double #962e50;
+  padding: 24px 25px;
+  border-radius: 2px;
 }
 
-.event-check-boxes {
-  display: flex;
+label, input, textarea {
+  color: white;
+  text-align: center;
+}
+
+label {
+  margin: 0.5em;
+}
+
+input, textarea {
+  background-color: #962e502e;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+
+.categories {
+  text-align: center;
+}
+
+input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 5px;
+  margin: 0 7px;
+  background-color: #962e502e;
+}
+
+input[type=checkbox]:checked {
+  background-color: #962e50;
+}
+
+.checkbox_container {
+ display: inline;
 }
 
 .forms {
   display: flex;
   justify-content: center;
+}
+
+.envoyer {
+  border: 7px double #962e50;
+  margin-top: 28px;
+  width: 425px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
+.cats {
+  margin-top: 27px;
 }

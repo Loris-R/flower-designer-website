@@ -81,7 +81,7 @@
   </div>
 </div>
 <div class="forms">
-  <%= form_with model: @quoting, class: "quoting-form" do |form| %>
+  <%= form_with model: @quoting, id: "quoting-form" do |form| %>
   <%= form.fields_for :contact do |contact_form| %>
     <%= contact_form.label :first_name, "Prénom *", required: true %>
     <%= contact_form.text_field :first_name %>
@@ -102,8 +102,16 @@
   <%= form.text_area :city, required: true %>
   <%= form.label :event_date, "Date de l'évènement *" %>
   <%= form.date_field :event_date, required: true %>
-  <%= form.label :categories, "Categories souhaitées *" %>
-  <%= form.collection_check_boxes :categories, Quoting::CATEGORIES, :to_s, :to_s,include_hidden: false, required: true %>
-  <%= form.submit "Envoyer" %>
+  <%= form.label :categories, "Categories souhaitées *", class: "cats" %>
+  <div class="categories">
+    <%= form.collection_check_boxes(:categories, Quoting::CATEGORIES, :to_s, :to_s, include_hidden: false, required: true) do |b| %>
+      <%= b.label class:"label-checkbox" do%>
+        <%= b.check_box + b.text %>
+      <%end%>
+    <% end %>
+  </div>
+  <div class="submit">
+    <%= form.submit "Envoyer", class: "envoyer" %>
+  </div>
 <% end %>
 </div>
