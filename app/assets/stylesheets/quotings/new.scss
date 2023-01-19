@@ -1,10 +1,11 @@
-#quoting-form {
+#quoting-form, #contact-form {
   display: flex;
   flex-direction: column;
   width: 45vw;
   border: 5px double #962e50;
   padding: 24px 25px;
   border-radius: 2px;
+  background-color: #464a524f;
 }
 
 label, input, textarea {
@@ -63,4 +64,10 @@ input[type=checkbox]:checked {
 
 .cats {
   margin-top: 27px;
+}
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+  #quoting-form, #contact-form {
+    width: 88vw;
+  }
 }
