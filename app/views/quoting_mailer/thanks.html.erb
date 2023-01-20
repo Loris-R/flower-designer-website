@@ -1,21 +1,67 @@
-<h2>accusé de réception - Alicia-bussereau.com</h2>
+<style>
+  .middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
-<div>
-  <p>
-    Je vous confirme que votre demande de devis est bien arrivé, <br>
-    je reviens vers vous au plus vite pour le préciser / finaliser.
-  </p>
-  <p>En attendant, si besoin vous pouvez m'appeler à tout moment au 06 13 71 51 86</p>
-</div>
+  .doubleline, .line {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
 
-<h3>Résumé de votre demande de devis :</h3>
+  .doubleline {
+    text-decoration-style: double;
+  }
 
-<div>
+  a, .doubleline, .line {
+    color: #c12849;
+  }
+
+</style>
+
+<div class="middle">
+  <h2 class="doubleline"> Accusé de réception - Alicia-bussereau.com</h2>
+
+  <div>
     <p>
-      Les informations données pour le devis : <br>
-      Lieux de l'évènement : <%= @quoting.address %> <%= @quoting.zipcode %> <%= @quoting.city %>
-      Date : <%= @quoting.event_date %>
-      Type(s) d'évènements demandé(s) : <%= @quoting.categories.join(", ") %>
+      Je vous confirme que j'ai bien recu votre demande de devis
     </p>
+    <p>
+      je reviens vers vous au plus vite pour le préciser et le finaliser.
+    </p>
+    <p>
+      En attendant, si besoin vous pouvez m'appeler à tout moment au:
+      <a href="tel:0613715186"> 06 13 71 51 86 </a>
+    </p>
+  </div>
+
+  <h3 class="doubleline">Résumé de votre demande de devis :</h3>
+
+  <div>
+      <p class="line">
+        Les informations données pour le devis
+      </p>
+      <p class="line">
+        Lieux de l'évènement
+      <p>
+      <p>
+      <%= @quoting.address %>
+      </p>
+      <p> <%= @quoting.zipcode %> <%= @quoting.city %> </p>
+      <p class="line">
+        Date
+      </p>
+      <p>
+      <%= @quoting.event_date %>
+      </p>
+      <p class="line">
+        Type(s) d'évènements demandé(s)
+      </p>
+      <p>
+        <%= @quoting.categories.join(", ") %>
+      </p>
+    </div>
   </div>
 </div>
