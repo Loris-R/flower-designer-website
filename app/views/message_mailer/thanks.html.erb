@@ -1,12 +1,36 @@
-<h2>accusé de réception - Alicia-bussereau.com</h2>
+<style>
+  .middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
-<div>
-  <p>Je vous confirme que votre message est bien arrivé, je reviens vers vous au plus vite</p>
-  <p>En attendant, si besoin vous pouvez m'appeler à tout moment au 06 13 71 51 86</p>
-</div>
+  .doubleline, .line {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
 
-<h3>Résumé de votre message</h3>
+  .doubleline {
+    text-decoration-style: double;
+  }
 
-<div>
-  <p><%= simple_format(@message.content) %></p>
+  a, .doubleline, .line {
+    color: #c12849;
+  }
+</style>
+
+<div class="middle">
+  <h2 class="doubleline"> accusé de réception - Alicia-bussereau.com </h2>
+
+  <div>
+    <p>Je vous confirme que votre message est bien arrivé, je reviens vers vous au plus vite</p>
+    <p>En attendant, si besoin vous pouvez m'appeler à tout moment au <a href="tel:0613715186"> 06 13 71 51 86 </a> </p>
+  </div>
+
+  <h3 class="line"> Résumé de votre message </h3>
+
+  <div>
+    <p><%= simple_format(@message.content) %></p>
+  </div>
 </div>
