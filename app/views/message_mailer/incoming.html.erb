@@ -1,14 +1,44 @@
-<h1>Nouveau message</h1>
+<style>
+  .middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
-<p>
-  <%= @contact.first_name %> <%= @contact.last_name %> vous a envoyé un nouveau message par le formulaire de contact sur <%= link_to "alicia-bussereau.com", "https://alicia-bussereau.com"  %> 
-</p>
+  .doubleline, .line {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
 
-<p><%= simple_format(@message.content) %></p>
+  .doubleline {
+    text-decoration-style: double;
+  }
 
-<p>
-  Répondre au message : <%= link_to @contact.email, "#" %><br>
-  <% if @contact.phone_number %>
-    Appeler <%= @contact.first_name %> : <%= @contact.phone_number %>
-  <% end %>
-</p>
+  .doubleline, .line {
+    color: #c12849;
+  }
+
+</style>
+
+<div class="middle">
+  <h1 class="doubleline"> Nouveau message </h1>
+
+  <p>
+    <%= @contact.first_name %> <%= @contact.last_name %> vous a envoyé un nouveau message par le formulaire de contact sur <%= link_to "alicia-bussereau.com", "https://alicia-bussereau.com"  %>
+  </p>
+  <p class="line"> Message </p>
+  <%= simple_format(@message.content) %>
+
+  <p class="line">
+    Répondre au message
+  </p>
+  <p>
+    <%= link_to @contact.email, "#" %>
+  </p>
+    <% if @contact.phone_number %>
+      <p class="line"> Appeler </p>
+      <%= @contact.first_name %> au <%= @contact.phone_number %>
+    <% end %>
+  </p>
+</div>

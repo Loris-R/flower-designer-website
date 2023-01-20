@@ -80,7 +80,7 @@
     </button>
   </div>
 </div>
-<div class="forms">
+<div class="forms margin">
   <%= form_with model: @quoting, id: "quoting-form" do |form| %>
   <%= form.fields_for :contact do |contact_form| %>
     <%= contact_form.label :first_name, "Prénom *", required: true %>

@@ -1,33 +1,89 @@
-<h1>Demande de devis</h1>
+<style>
+  .middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
-<p>
-  <%= @contact.first_name %> <%= @contact.last_name %> demande un devis sur <%= link_to "alicia-bussereau.com", "https://alicia-bussereau.com"  %> 
-</p>
+  .doubleline, .line {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
 
-<div>
-  <div>
-    Les infos sur le client : <br>
-    Nom: <%= @contact.first_name %> <%= @contact.last_name %>
-    Email: <%= @contact.email %>
-    Tel: <%= @contact.phone_number %>
-    <% if @contact.city %>
-      Ville : <%= @contact.city %>
-    <% end %>
-  </div>
-  <div>
+  .doubleline {
+    text-decoration-style: double;
+  }
+
+  .border-bot {
+    border-bottom: 1px solid red;
+  }
+
+  .doubleline, .line {
+    color: #c12849;
+  }
+
+</style>
+
+<div class="middle">
+  <h1 class="doubleline">Demande de devis</h1>
+  <p>
+    <%= @contact.first_name %> <%= @contact.last_name %> demande un devis sur <%= link_to "alicia-bussereau.com", "https://alicia-bussereau.com"  %>
+  </p>
+  <div class="border-bot">
     <p>
-      Les informations données pour le devis : <br>
-      Lieux de l'évènement : <%= @quoting.address %> <%= @quoting.zipcode %> <%= @quoting.city %>
-      Date : <%= @quoting.event_date %>
-      Type(s) d'évènements demandé(s) : <%= @quoting.categories.join(", ") %>
+      <span class="doubleline"> Les infos sur le client </span>
+    </p>
+    <p>
+      <span class="line"> Nom </span>
+      <p> <%= @contact.first_name %> <%= @contact.last_name %> </p>
+    </p>
+    <p>
+      <span class="line"> Email </span>
+      <p> <%= @contact.email %> </p>
+    </p>
+      <span class="line">Telephone </span>
+      <p> <%= @contact.phone_number %> </p>
+    </p>
+    <p>
+      <% if @contact.city %>
+         <span class="line"> Ville </span>
+         <p> <%= @contact.city %> </p>
+      <% end %>
+    </p>
+  </div>
+  <div class="border-bot">
+    <p>
+      <span class="doubleline"> Les informations données pour le devis </span>
+    </p>
+    <p>
+      <span class="line"> Lieux de l'évènement </span>
+    </p>
+    <p>
+      <%= @quoting.address %>
+    </p>
+    <p>
+      <%= @quoting.zipcode %> <%= @quoting.city %>
+    </p>
+    <p>
+      <span class="line"> Date </span>
+      <p> <%= @quoting.event_date %> </p>
+    </p>
+    <p>
+      <span class="line">Type(s) d'évènements demandé(s) </span>
+      <p> <%= @quoting.categories.join(", ") %> </p>
+    </p>
+  </div>
+  <div class="border-bot">
+    <p class="doubleline"> Contact </p>
+    <p>
+      <span class="line"> Répondre au message </span>
+      <p> <%= link_to @contact.email, "#" %> </p>
+
+      <% if @contact.phone_number %>
+        <span class="line"> Appeler </span>
+        <p> <%= @contact.first_name %> au <%= @contact.phone_number %> </p>
+      <% end %>
     </p>
   </div>
 </div>
-
-
-<p>
-  Répondre au message : <%= link_to @contact.email, "#" %><br>
-  <% if @contact.phone_number %>
-    Appeler <%= @contact.first_name %> : <%= @contact.phone_number %>
-  <% end %>
-</p>
