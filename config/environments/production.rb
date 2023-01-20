@@ -5,7 +5,7 @@ Rails.application.configure do
 
   # mailer configuration
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "alicia-bussereau.com" }
+  config.action_mailer.default_url_options = { host: "https://alicia-staging.herokuapp.com/" }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
