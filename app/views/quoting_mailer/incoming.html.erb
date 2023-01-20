@@ -10,7 +10,7 @@
     Nom: <%= @contact.first_name %> <%= @contact.last_name %>
     Email: <%= @contact.email %>
     Tel: <%= @contact.phone_number %>
-    <%= if @contact.city %>
+    <% if @contact.city %>
       Ville : <%= @contact.city %>
     <% end %>
   </div>
@@ -20,7 +20,6 @@
       Lieux de l'évènement : <%= @quoting.address %> <%= @quoting.zipcode %> <%= @quoting.city %>
       Date : <%= @quoting.event_date %>
       Type(s) d'évènements demandé(s) : <%= @quoting.categories.join(", ") %>
-      <%= simple_format(@message.content) %>
     </p>
   </div>
 </div>
