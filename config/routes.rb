@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   get 'performances', to: 'pages#performances'
   get 'murs', to: 'pages#murs'
   get 'cours', to: 'pages#cours'
-  get 'atelier', to: 'pages#atelier'
+  get 'concours', to: 'pages#concours'
 end
