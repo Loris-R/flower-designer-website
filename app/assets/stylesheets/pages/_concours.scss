@@ -1,0 +1,31 @@
+.concours-photo {
+  width: 33vw;
+  height: auto;
+  margin: 0 8px 0 8px;
+}
+
+.pic-concours {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+@media only screen and (min-width:279px) and (max-width:900px) {
+  .concours-photo {
+    width: 90vw;
+    height: auto;
+    margin: 1em 0 5px 0;
+  }
+
+  .pic-concours {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+
+  .marge {
+    margin-bottom: 2em;
+  }
+
+}

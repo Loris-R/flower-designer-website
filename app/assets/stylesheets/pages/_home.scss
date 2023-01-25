@@ -29,8 +29,8 @@ body {
 }
 
 .scaled-logo {
-  width: 35px;
-  height: 35px;
+  width: 23px;
+  height: 23px;
   animation: scale 2750ms ease-in forwards;
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 .fixed-logo {
-  width: 230px;
-  height: 230px;
+  width: 155px;
+  height: 155px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -279,6 +279,16 @@ body {
     width: 100vw;
   }
 
+  .scaled-logo {
+    width: 19px;
+    height: 19px;
+  }
+
+  .fixed-logo {
+    width: 129px;
+    height: 129px;
+  }
+
   .center_menu {
     margin-right: 0;
     margin-bottom: 1rem;
@@ -350,5 +360,9 @@ body {
 
   .open {
     right: 0;
+  }
+
+  .parcours-part {
+    margin-bottom: 22px;
   }
 }
