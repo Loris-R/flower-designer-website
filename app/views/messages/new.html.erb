@@ -1,5 +1,6 @@
 <div class="open-up">
-  <div class="forms">
+  <h1 class="title-evenement white"> Contact </h1>
+  <div class="forms around">
     <%= form_with model: @message, id: "contact-form" do |form| %>
       <%= form.fields_for :contact do |contact_form| %>
         <%= contact_form.label :first_name, "Prénom *", required: true %>
