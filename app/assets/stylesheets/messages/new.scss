@@ -42,3 +42,36 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media only screen and (min-width:279px) and (max-width:1420px) {
+
+  .rubrique {
+    grid-template-columns: unset;
+  }
+
+  .rubrique-media, .rubrique-adress {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  .around {
+    padding:0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .separator-line {
+    border-right: unset;
+  }
+
+  .adress {
+    text-align: center;
+    margin-left: unset;
+    margin-top: 24px;
+  }
+
+  #contact-form-two {
+    width: 87vw;
+  }
+}
