@@ -5,7 +5,7 @@ Rails.application.configure do
 
   # mailer configuration
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "https://alicia-staging.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: "https://alicia-bussereau.com" }
   config.action_mailer.smtp_settings = {
     address: ENV['SMTP_SERVER'],
     port: ENV['SMTP_PORT'],
