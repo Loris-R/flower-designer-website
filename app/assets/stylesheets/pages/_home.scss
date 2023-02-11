@@ -318,6 +318,9 @@ body {
 
   .home-page {
     background-image: url("background-home-tel.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .parcours-photo {
