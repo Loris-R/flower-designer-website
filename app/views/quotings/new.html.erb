@@ -91,14 +91,14 @@
     <%= contact_form.text_field :email, required: true %>
     <%= contact_form.label :phone_number, "Numéro de telephone" %>
     <%= contact_form.text_field :phone_number %>
-    <%= contact_form.label :city, "Ville" %>
+    <%= contact_form.label :city, "Votre ville" %>
     <%= contact_form.text_field :city %>
   <% end %>
-  <%= form.label :address, "address *" %>
+  <%= form.label :address, "adresse de l'évènement *" %>
   <%= form.text_area :address, required: true %>
   <%= form.label :zipcode, "Code postal *" %>
   <%= form.text_area :zipcode, required: true %>
-  <%= form.label :city, "Ville *" %>
+  <%= form.label :city, "Ville de l'évènement *" %>
   <%= form.text_area :city, required: true %>
   <%= form.label :event_date, "Date de l'évènement *" %>
   <%= form.date_field :event_date, required: true %>
