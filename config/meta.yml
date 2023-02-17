@@ -1,0 +1,9 @@
+# meta_product_name: "Product Name"
+meta_title: "Alicia Bussereau - Scénographe végétale"
+meta_description: "
+  Alicia Bussereau Scénographe Végétale, c'est un regard nouveau et unique autour de l'art floral.
+  Je vous accueille dans mon atelier sur les bords de Loire, près d'Angers, pour mettre en place vos projets floraux des plus simples aux plus fous : entre performances artistiques, mariages, devantures de boutiques, mur en végétaux artificiels, cours d'art floral ou simple commande de fleurs...
+  Pour vous, je réaliserai des créations sur mesures avec des pièces délicatement sélectionnées pour toujours privilégier la fraîcheur et la qualité de mon travail.
+  "
+meta_image: "coiffe-ukrainienne.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
