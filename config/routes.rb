@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get 'murs', to: 'pages#murs'
   get 'cours', to: 'pages#cours'
   get 'concours', to: 'pages#concours'
+
+  # get 'sitemap.xml'
 end
