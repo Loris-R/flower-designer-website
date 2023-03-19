@@ -25,3 +25,10 @@ a:link, a:visited, a:hover, a:active {
   flex-direction: column;
   margin-right: 35px;
 }
+
+@media only screen and (min-width:279px) and (max-width:1420px) {
+
+  .footer {
+    width: 100vw;
+  }
+}

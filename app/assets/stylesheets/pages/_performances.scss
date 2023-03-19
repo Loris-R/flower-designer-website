@@ -78,6 +78,13 @@ button .fade {
   transform: rotateY(180deg);
 }
 
+.text-perf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
 .white {
   color: white;
 }
@@ -309,14 +316,15 @@ button .fade {
 }
 
 .title-performance {
-  margin: 182px 0 0 0;
+  margin: 182px 0 5rem 0;
   text-align: center;
   line-height: 0;
 }
 
 .text-performance {
-  padding: 5em;
+  padding: 1em;
   text-align: center;
+  width: 85vw;
 }
 
 .card-one {

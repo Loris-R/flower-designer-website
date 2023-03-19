@@ -44,7 +44,7 @@ export default class extends Controller {
       if (frameshootings[shootingNumber].style.height == "555px") {
         cards.forEach(card => card.classList.toggle("fade"));
         setTimeout(() => {
-          frameshootings[shootingNumber].style.height = "780px";
+          frameshootings[shootingNumber].style.height = "2954px";
         }, 800);
       } else {
         setTimeout(() => {
