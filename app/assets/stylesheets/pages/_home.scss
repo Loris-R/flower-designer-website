@@ -260,6 +260,7 @@ body {
 
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
+    width: 100vw;
   }
 
   .concept-part {
@@ -268,6 +269,7 @@ body {
 
   .parcours-part, .concept-part {
     align-items: center;
+    width: 100vw;
   }
 
   .p-concept, .p-parcours {
@@ -323,22 +325,21 @@ body {
     align-items: center;
   }
 
-  .parcours-photo {
+  .parcours-photo, .concept-photo {
     height: auto;
-    width: 400px;
+    width: 100vw;
     margin-bottom: unset;
   }
 
 }
 
-@media only screen and (min-width:279px) and (max-width:405px) {
-
-  .concept-photo, .photo-parcours {
-    width: 100vw;
-  }
-}
 
 @media only screen and (min-width:279px) and (max-width:1420px) {
+
+  body {
+    width: 100vw;
+  }
+
   .background {
     height: unset;
   }
@@ -366,6 +367,6 @@ body {
   }
 
   .parcours-part {
-    margin-bottom: 22px;
+    margin-bottom: 55px;
   }
 }

@@ -21,19 +21,19 @@
 }
 
 .icon i:nth-child(1) {
-  top: 16px;
+  top: 85px;
 }
 
 .icon i:nth-child(2) {
-  top: 26px;
+  top: 95px;
 }
 
 .icon i:nth-child(3) {
-  top: 36px;
+  top: 105px;
 }
 
 .icon.move i:nth-child(1) {
-  top: 25px;
+  top: 94px;
   transform: rotateY(180deg);
   background-color: white;
 }
@@ -44,7 +44,7 @@
 }
 
 .icon.move i:nth-child(3) {
-  top: 25px;
+  top: 94px;
   transform: rotateY(180deg);
   background-color: white;
 }
@@ -52,7 +52,7 @@
 .icon {
   display: none;
   position: absolute;
-  height: 59px;
+  height: 151px;
   z-index: 1001;
   right: 76px;
   width:31px;
@@ -126,4 +126,27 @@
 
 .contact {
  height: 16vh;
+}
+
+@media only screen and (min-width:279px) and (max-width:1420px) {
+
+  .icon.move i:nth-child(1) {
+      top: 25px;
+    }
+
+    .icon.move i:nth-child(3) {
+      top: 25px;
+    }
+
+    .icon i:nth-child(1) {
+      top: 16px;
+    }
+
+    .icon i:nth-child(2) {
+      top: 26px;
+    }
+
+    .icon i:nth-child(3) {
+      top: 36px;
+    }
 }
