@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "pages#home"
 
-  # resources :contacts, only: %i(create)
-
   get "votre-evenement", to: "quotings#new"
   resources :quotings, only: :create
 
@@ -14,5 +12,4 @@ Rails.application.routes.draw do
   get 'cours', to: 'pages#cours'
   get 'concours', to: 'pages#concours'
 
-  # get 'sitemap.xml'
 end
