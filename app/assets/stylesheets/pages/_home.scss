@@ -35,9 +35,8 @@ body {
   /* Chrome, Safari, Opera */
   transform: translateZ(0);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 49vh;
+  left: 49vw;
 }
 
 .fixed-logo {
@@ -369,5 +368,16 @@ body {
 
   .parcours-part {
     margin-bottom: 55px;
+  }
+
+  .scaled-logo {
+    top: 50vh;
+    left: 50vw;
+    filter: none;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+
   }
 }
