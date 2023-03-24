@@ -321,7 +321,7 @@ button .fade {
   line-height: 0;
 }
 
-.text-performance {
+.text-performance-one, .text-performance {
   padding: 1em;
   text-align: center;
   width: 85vw;
@@ -411,8 +411,12 @@ button .fade {
     margin: 91px 0 0 0;
   }
 
+  .text-performance-one {
+    padding: 5em 1.5em 0em 1.5em;
+  }
+
   .text-performance {
-    padding: 4em 1em 1.5em 1em;
+    padding: 2em 1em 0em 1em;
   }
 
   .page-performance {
