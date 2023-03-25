@@ -129,10 +129,10 @@ body {
 }
 
 .visuallyshow {
-  display: inline-block;
-  text-align: center;
-  line-height: 100vh;
-  width: 98.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   animation: fadein ease-in 850ms forwards;
   -webkit-animation: fadein ease-in 850ms forwards;
   /* Safari, Chrome and Opera > 12.1 */
