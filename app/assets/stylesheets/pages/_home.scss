@@ -375,14 +375,7 @@ body {
   }
 
   .scaled-logo {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     filter: none;
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
 
   }
 }
