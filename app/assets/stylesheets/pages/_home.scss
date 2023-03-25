@@ -19,6 +19,9 @@ body {
   background-color: #4B515D;
   transition: all 5ms linear;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .play {
@@ -26,17 +29,24 @@ body {
 }
 
 .scaled-logo {
-  width: 23px;
-  height: 23px;
-  animation: scale 2750ms ease-in forwards;
+  width: 155px;
+  height: 155px;
+  animation: effect 2750ms ease-in forwards;
+}
+
+@keyframes effect {
+0% {
+  transform: scale(0.1);
+}
+100% {
+  transform: scale(8);
   -ms-transform: translateZ(0);
-  /* IE 9 */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
   -webkit-transform: translateZ(0);
-  /* Chrome, Safari, Opera */
   transform: translateZ(0);
-  position: absolute;
-  top: 49vh;
-  left: 49vw;
+}
 }
 
 .fixed-logo {
@@ -46,12 +56,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-@keyframes scale {
-  to {
-    transform: scale(7.0);
-  }
 }
 
 .home-page {
@@ -282,8 +286,8 @@ body {
   }
 
   .scaled-logo {
-    width: 19px;
-    height: 19px;
+    width: 129px;
+    height: 129px;
   }
 
   .fixed-logo {
@@ -371,8 +375,9 @@ body {
   }
 
   .scaled-logo {
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     filter: none;
     -webkit-filter: blur(0px);
     -moz-filter: blur(0px);
