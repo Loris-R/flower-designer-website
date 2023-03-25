@@ -52,10 +52,6 @@ body {
 .fixed-logo {
   width: 155px;
   height: 155px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .home-page {
@@ -136,6 +132,7 @@ body {
   display: inline-block;
   text-align: center;
   line-height: 100vh;
+  width: 98.8vw;
   animation: fadein ease-in 850ms forwards;
   -webkit-animation: fadein ease-in 850ms forwards;
   /* Safari, Chrome and Opera > 12.1 */
@@ -283,6 +280,7 @@ body {
 
   #scale-logo {
     width: 100vw;
+    position: absolute;
   }
 
   .scaled-logo {
