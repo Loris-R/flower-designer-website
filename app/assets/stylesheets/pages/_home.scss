@@ -14,7 +14,6 @@ body {
 
 .scale-logo {
   display: block;
-  width: 98.8vw;
   height: 100vh;
   background-color: #4B515D;
   transition: all 5ms linear;
@@ -54,7 +53,6 @@ body {
 }
 
 .home-page {
-  width: 98.8vw;
   height: 100vh;
   background-image: url("background-home.png");
   animation: fade ease-in 8000ms forwards;
@@ -407,7 +405,6 @@ body {
 
   .parcours-part, .concept-part {
     align-items: center;
-  // width: 100vw;
   }
 
   .p-concept, .p-parcours {
@@ -416,7 +413,6 @@ body {
   }
 
   .scale-logo {
-  //  width: 100vw;
     position: absolute;
   }
 
@@ -501,10 +497,6 @@ body {
 
 @media only screen and (min-width:279px) and (max-width:1420px) {
 
-  body {
-  //  width: 100vw;
-  }
-
   .background {
     height: unset;
   }
@@ -523,7 +515,7 @@ body {
     top: 0;
     height: 319px;
     text-align: center;
-   // width: 100vw;
+    width: 100vw;
     background-color: #962e50;
   }
 
@@ -537,6 +529,13 @@ body {
 
   .scaled-logo-image {
     filter: none;
+  }
 
+  .scale-logo {
+    width: 100vw;
+  }
+
+  .visuallyshow {
+    height: unset;
   }
 }
