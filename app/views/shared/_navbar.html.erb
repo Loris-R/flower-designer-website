@@ -1,4 +1,4 @@
-<div data-controller="navbar">
+<div data-controller="navbar" class="<%= "home-page" if current_page?(root_path) %>">
   <div class="<%= "background" unless current_page?(root_path)%>">
     <div class="menu">
       <div></div>
@@ -25,7 +25,7 @@
       <%= image_tag "LOGOROND_tresepais_blanc.png", class: "scaled-logo" %>
     </div>
     <div class="play" data-navbar-target="bottomhome">
-      <img class="back-image" src="assets/background-home.png" data-navbar-target="image"/>
       <%= image_tag "LOGOROND_tresepais_blanc.png", class: "fixed-logo" %>
+    </div>
   <% end %>
 </div>

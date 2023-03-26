@@ -52,16 +52,14 @@ body {
 .fixed-logo {
   width: 155px;
   height: 155px;
-  z-index: 200;
 }
 
-.back-image {
-  position: absolute;
+.home-page {
+  width: 98.8vw;
+  height: 100vh;
+  background-image: url("background-home.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  width: 98.8vw;
-
 }
 
 .visuallyhidden {
@@ -80,9 +78,7 @@ body {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     opacity: 0;
   }
@@ -93,9 +89,7 @@ body {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     opacity: 0;
   }
@@ -106,9 +100,7 @@ body {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     opacity: 0;
   }
@@ -119,9 +111,7 @@ body {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     opacity: 0;
   }
@@ -132,9 +122,7 @@ body {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.5;
-  }
+
   100% {
     opacity: 0;
   }
@@ -145,14 +133,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  animation: fadein ease-in 1500ms forwards;
-  -webkit-animation: fadein ease-in 3000ms forwards;
+  animation: fadein ease-in 850ms forwards;
+  -webkit-animation: fadein ease-in 850ms forwards;
   /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein ease-in 3000ms forwards;
+  -moz-animation: fadein ease-in 850ms forwards;
   /* Firefox < 16 */
-  -ms-animation: fadein ease-in 3000ms forwards;
+  -ms-animation: fadein ease-in 850ms forwards;
   /* Internet Explorer */
-  -o-animation: fadein ease-in 3000ms forwards;
+  -o-animation: fadein ease-in 850ms forwards;
   /* Opera < 12.1 */
 }
 
@@ -160,15 +148,7 @@ body {
   0% {
     opacity: 0;
   }
-  25% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.7;
-  }
+
   100% {
     opacity: 1;
   }
@@ -178,18 +158,6 @@ body {
 @-moz-keyframes fadein {
   0% {
     opacity: 0;
-  }
-
-  25% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.7;
   }
 
   100% {
@@ -203,18 +171,6 @@ body {
     opacity: 0;
   }
 
-  25% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.7;
-  }
-
   100% {
     opacity: 1;
   }
@@ -226,18 +182,6 @@ body {
     opacity: 0;
   }
 
-  25% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.7;
-  }
-
   100% {
     opacity: 1;
   }
@@ -247,18 +191,6 @@ body {
 @-o-keyframes fadein {
   0% {
     opacity: 0;
-  }
-
-  25% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  75% {
-    opacity: 0.7;
   }
 
   100% {
@@ -321,8 +253,15 @@ body {
 
 @media only screen and (min-width:279px) and (max-width:900px) {
 
+  .home-page {
+    width: 100vw;
+    background-size: 100vh;
+    background-position: 37% 0%;
+  }
+
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
+    width: 100vw;
   }
 
   .concept-part {
@@ -331,6 +270,7 @@ body {
 
   .parcours-part, .concept-part {
     align-items: center;
+    width: 100vw;
   }
 
   .p-concept, .p-parcours {
@@ -380,7 +320,8 @@ body {
     font-size: small;
   }
 
-  .back-image {
+  .home-page {
+    background-image: url("background-home-tel.jpg");
     display: flex;
     justify-content: center;
     align-items: center;

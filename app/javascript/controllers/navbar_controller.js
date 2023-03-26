@@ -1,22 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["icon", "optionshome", "tophome", "bottomhome", "image"]
+  static targets = ["icon", "optionshome", "tophome", "bottomhome"]
 
   connect() {
     const icon = this.iconTarget;
     const optionshome = this.optionshomeTarget;
-    const image = this.imageTarget;
-    console.log(image)
 
     if (window.matchMedia("(max-width:1420px)").matches) {
-      image.setAttribute("src", "assets/background-home-tel.jpg");
-      image.style.height = "100vh";
-      image.style.width = "100vw";
-      image.classList.add("back-image");
-    };
-
-    if (window.matchMedia("(min-width:1420px)").matches) {
       optionshome.classList.remove("open-menu-on-pages");
     };
 
