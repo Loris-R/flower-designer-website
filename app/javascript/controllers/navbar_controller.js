@@ -10,7 +10,7 @@ export default class extends Controller {
     console.log(image)
 
     if (window.matchMedia("(max-width:1420px)").matches) {
-      image.setAttribute("src", "../../assets/images/background-home-tel.jpg");
+      image.setAttribute("src", "assets/background-home-tel.jpg");
       image.style.height = "100vh";
       image.style.width = "100vw";
       image.classList.add("back-image");
@@ -18,10 +18,6 @@ export default class extends Controller {
 
     if (window.matchMedia("(min-width:1420px)").matches) {
       optionshome.classList.remove("open-menu-on-pages");
-      image.setAttribute("src", "../../assets/images/background-home.png");
-      image.style.height = "100vh";
-      image.style.width = "98.8vw";
-      image.classList.add("back-image");
     };
 
     function fadeOutDelay(tophome) {
