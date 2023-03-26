@@ -14,7 +14,6 @@ export default class extends Controller {
     function fadeOutDelay(tophome) {
       function fadeOut() {
         tophome.classList.add('visuallyhidden');
-        tophome.style.display = "none"
       };
       setTimeout(fadeOut, 2400);
     };

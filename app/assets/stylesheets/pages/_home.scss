@@ -24,9 +24,6 @@ body {
   align-items: center;
 }
 
-.play {
-  display: none;
-}
 
 .scaled-logo {
   width: 155px;
@@ -58,8 +55,35 @@ body {
   width: 98.8vw;
   height: 100vh;
   background-image: url("background-home.png");
+  animation: fade ease-in 8000ms forwards;
+  -webkit-animation: fade ease-in 5000ms forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fade ease-in 5000ms forwards;
+  /* Firefox < 16 */
+  -ms-animation: fade ease-in 5000ms forwards;
+  /* Internet Explorer */
+  -o-animation: fade ease-in 5000ms forwards;
+    /* Opera < 12.1 */
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .visuallyhidden {
@@ -78,7 +102,15 @@ body {
   0% {
     opacity: 1;
   }
-
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.1;
+  }
   100% {
     opacity: 0;
   }
@@ -129,6 +161,9 @@ body {
 }
 
 .visuallyshow {
+  position: absolute;
+  top: 0;
+  width: 98vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +183,15 @@ body {
   0% {
     opacity: 0;
   }
-
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
   100% {
     opacity: 1;
   }
@@ -159,7 +202,15 @@ body {
   0% {
     opacity: 0;
   }
-
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.7;
+  }
   100% {
     opacity: 1;
   }
@@ -168,7 +219,19 @@ body {
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
   0% {
-    opacity: 0;
+      opacity: 0;
+    }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.7;
   }
 
   100% {
@@ -182,6 +245,18 @@ body {
     opacity: 0;
   }
 
+  25% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.7;
+  }
+
   100% {
     opacity: 1;
   }
@@ -191,6 +266,18 @@ body {
 @-o-keyframes fadein {
   0% {
     opacity: 0;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.7;
   }
 
   100% {
@@ -325,6 +412,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fade ease-in 8000ms forwards;
+    -webkit-animation: fade ease-in 5000ms forwards;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fade ease-in 5000ms forwards;
+    /* Firefox < 16 */
+    -ms-animation: fade ease-in 5000ms forwards;
+    /* Internet Explorer */
+    -o-animation: fade ease-in 5000ms forwards;
+    /* Opera < 12.1 */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .parcours-photo, .concept-photo {
