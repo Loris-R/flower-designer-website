@@ -12,20 +12,22 @@ body {
   background-color: #4B515D;
 }
 
-#scale-logo {
+.scale-logo {
   display: block;
   width: 98.8vw;
   height: 100vh;
   background-color: #4B515D;
   transition: all 5ms linear;
   z-index: 100;
+}
+
+.in-middle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.scaled-logo {
+.scaled-logo-image {
   width: 155px;
   height: 155px;
   animation: effect 2750ms ease-in forwards;
@@ -122,6 +124,18 @@ body {
     opacity: 1;
   }
 
+  25% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.1;
+  }
+
   100% {
     opacity: 0;
   }
@@ -131,6 +145,18 @@ body {
 @-webkit-keyframes fadeout {
   0% {
     opacity: 1;
+  }
+
+  25% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.1;
   }
 
   100% {
@@ -144,6 +170,18 @@ body {
     opacity: 1;
   }
 
+  25% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.1;
+  }
+
   100% {
     opacity: 0;
   }
@@ -155,27 +193,40 @@ body {
     opacity: 1;
   }
 
+  25% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.1;
+  }
+
   100% {
     opacity: 0;
-  }
+    }
+}
+
+.hidden {
+  display: none;
 }
 
 .visuallyshow {
-  position: absolute;
-  top: 0;
-  width: 98vw;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  animation: fadein ease-in 850ms forwards;
-  -webkit-animation: fadein ease-in 850ms forwards;
+  animation: fadein ease-in 650ms forwards;
+  -webkit-animation: fadein ease-in 650ms forwards;
   /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein ease-in 850ms forwards;
+  -moz-animation: fadein ease-in 650ms forwards;
   /* Firefox < 16 */
-  -ms-animation: fadein ease-in 850ms forwards;
+  -ms-animation: fadein ease-in 650ms forwards;
   /* Internet Explorer */
-  -o-animation: fadein ease-in 850ms forwards;
+  -o-animation: fadein ease-in 650ms forwards;
   /* Opera < 12.1 */
 }
 
@@ -341,14 +392,13 @@ body {
 @media only screen and (min-width:279px) and (max-width:900px) {
 
   .home-page {
-    width: 100vw;
-    background-size: 100vh;
-    background-position: 37% 0%;
+    width: unset;
+    background-position: 26% 0%;
   }
 
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
-    width: 100vw;
+  //  width: 100vw;
   }
 
   .concept-part {
@@ -357,7 +407,7 @@ body {
 
   .parcours-part, .concept-part {
     align-items: center;
-    width: 100vw;
+  // width: 100vw;
   }
 
   .p-concept, .p-parcours {
@@ -365,12 +415,12 @@ body {
     margin: 4rem 0 0 0;
   }
 
-  #scale-logo {
-    width: 100vw;
+  .scale-logo {
+  //  width: 100vw;
     position: absolute;
   }
 
-  .scaled-logo {
+  .scaled-logo-image {
     width: 129px;
     height: 129px;
   }
@@ -452,7 +502,7 @@ body {
 @media only screen and (min-width:279px) and (max-width:1420px) {
 
   body {
-    width: 100vw;
+  //  width: 100vw;
   }
 
   .background {
@@ -473,7 +523,7 @@ body {
     top: 0;
     height: 319px;
     text-align: center;
-    width: 100vw;
+   // width: 100vw;
     background-color: #962e50;
   }
 
@@ -485,7 +535,7 @@ body {
     margin-bottom: 55px;
   }
 
-  .scaled-logo {
+  .scaled-logo-image {
     filter: none;
 
   }

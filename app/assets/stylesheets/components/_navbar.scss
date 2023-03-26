@@ -53,9 +53,9 @@
   display: none;
   position: absolute;
   height: 151px;
-  z-index: 1001;
   right: 76px;
   width:31px;
+  z-index: 300;
 }
 
 .center_menu {
@@ -83,7 +83,6 @@
   flex-direction: row;
   justify-content: space-evenly;
   border-radius: 2px;
-  z-index: 100;
 }
 
 .hidemenu {
@@ -94,7 +93,6 @@
   position: fixed;
   transition: right linear .60s;
   right: 66px;
-  z-index: 1000;
 }
 
 .icon-on-pages {
