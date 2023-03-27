@@ -281,7 +281,6 @@ body {
 
   .concept-title, .parcours-title {
     padding: 4rem 3rem;
-  //  width: 100vw;
   }
 
   .concept-part {
@@ -299,6 +298,8 @@ body {
 
   .scale-logo {
     position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .scaled-logo-image {
