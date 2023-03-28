@@ -1,13 +1,5 @@
-<div data-controller="navbar" class="<%= "home-page" if current_page?(root_path) %>">
-  <div class="<%= "background" unless current_page?(root_path)%>">
-    <div class="menu">
-      <div></div>
-      <div class="icon <%= "icon-on-pages move" unless current_page?(root_path)%>" data-navbar-target="icon" data-action="click->navbar#translate">
-        <i class="light_icon icons"> </i>
-        <i class="light_icon icons"> </i>
-        <i class="light_icon icons"> </i>
-      </div>
-    </div>
+<div class="<%= "home-page" if current_page?(root_path) %>">
+  <div data-controller="navbar" class="<%= "background" unless current_page?(root_path)%>">
     <div class="optionshome <%= "hidemenu" if current_page?(root_path) %> <%= "open-menu-on-pages" unless current_page?(root_path) %>" data-navbar-target="optionshome">
       <% unless current_page?(root_path) %>
         <%= link_to "Acceuil", root_path, class: "language_link" %>
@@ -19,13 +11,23 @@
       <%= link_to "Concours", concours_path, class: "language_link" %>
       <%= link_to "Contact", contact_path, class: "language_link center_menu" %>
     </div>
+    <div class="menu">
+      <div></div>
+      <div class="icon <%= "icon-on-pages move" unless current_page?(root_path)%>"    data-navbar-target="icon" data-action="click->navbar#translate">
+        <i class="light_icon icons"> </i>
+        <i class="light_icon icons"> </i>
+        <i class="light_icon icons"> </i>
+      </div>
+    </div>
   </div>
   <% if current_page?(root_path) %>
-    <div class="scale-logo in-middle" data-navbar-target="tophome">
-      <%= image_tag "LOGOROND_tresepais_blanc.png", class: "scaled-logo-image" %>
-    </div>
-    <div data-navbar-target="bottomhome">
-      <%= image_tag "LOGOROND_tresepais_blanc.png", class: "fixed-logo" %>
+    <div data-controller="homepage">
+      <div class="scale-logo in-middle" data-homepage-target="tophome">
+        <%= image_tag "LOGOROND_tresepais_blanc.png", class: "scaled-logo-image" %>
+      </div>
+      <div data-homepage-target="bottomhome">
+        <%= image_tag "LOGOROND_tresepais_blanc.png", class: "fixed-logo" %>
+      </div>
     </div>
   <% end %>
 </div>

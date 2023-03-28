@@ -9,3 +9,6 @@ application.register("navbar", NavbarController)
 
 import PerformancesController from "./performances_controller"
 application.register("performances", PerformancesController)
+
+import HomepageController from "./homepage_controller"
+application.register("homepage", HomepageController)
